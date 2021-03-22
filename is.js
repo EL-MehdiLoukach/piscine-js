@@ -11,3 +11,7 @@ is.nan = function(number){
 is.str= function(number){
     return typeof number
 }
+
+is.bool= function(number){
+    return typeof number
+}
