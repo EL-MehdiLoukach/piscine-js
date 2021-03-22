@@ -14,7 +14,7 @@ function abs(number){
     }else{
         let word = number.toString()
         let a = word.substr(1,word.length -1)
-        let b = parseInt(a)
+        let b = parseFloat(a)
 
         return b
     }
