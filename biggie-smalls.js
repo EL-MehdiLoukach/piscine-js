@@ -1,3 +1,3 @@
-const smalls = 0
+const smalls = Number.NEGATIVE_INFINITY
 
-const biggie = 9
+const biggie = Number.POSITIVE_INFINITY
