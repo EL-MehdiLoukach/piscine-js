@@ -3,6 +3,10 @@ function indexOf(array,valueInArray,number){
 
     for(let i=0;i<=array.length-1;i++){
 
+        if (valueInArray==array[i]&&number==undefined){
+            return i
+        }
+
         if (valueInArray==array[i]){
             compteur +=1
         }
