@@ -29,7 +29,7 @@ function lastIndexOf(array,valueInArray,number){
 
     for(let i = array.length-1;i>=0;i--){
 
-        if (i<number){
+        if (i>number){
             continue
         }
 
