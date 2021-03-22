@@ -6,3 +6,8 @@ is.num = function(number){
 is.nan = function(number){
     return typeof number
 }
+
+
+is.str= function(number){
+    return typeof number
+}
