@@ -2,9 +2,9 @@ const escapeStr = "\`, \\, \/, \",\'"
 const arr = [4,'2']
 
 const obj = {
-    str : String,
-    num : Number,
-    bool : Boolean,
+    str : "hello",
+    num : 15,
+    bool : true,
     undef : undefined,
 }
 
