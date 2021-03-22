@@ -19,7 +19,11 @@ function multiply(number,number1){
         calcul += NUMBER
     }
 
-    if (number< 0 ||number1 < 0){
+    if(number <0 && number1<0){
+        return calcul
+    }
+
+    if (number<0 ||number1<0){
         let c = "-"+calcul.toString()
         let resultFinal = parseFloat(c)
 
@@ -42,6 +46,6 @@ function modulo(number,number1){
     let calcul =number - (multiply((Math.round(number/number1)),number1))
     return calcul
 }   
-console.log(multiply(4,4))
+console.log(multiply(-22,-123))
 //console.log(modulo(9,4))
 
