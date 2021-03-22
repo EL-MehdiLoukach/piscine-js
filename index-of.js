@@ -36,7 +36,7 @@ function lastIndexOf(array,valueInArray,number){
             compteur +=1
         }
 
-        if (compteur==number){
+        if (compteur==number +1){
             return i
         }
     }
