@@ -22,7 +22,7 @@ function yell(word){
 
 function whisper(word){
     let arg = "*"
-    arg += word + "*"
+    arg += word.toLowerCase() + "*"
     return arg
 }
 
