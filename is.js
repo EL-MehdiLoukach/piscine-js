@@ -1,4 +1,3 @@
-const is = {}
 
 is.num = function(number){
     let a = typeof number
