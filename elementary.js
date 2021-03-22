@@ -50,10 +50,13 @@ function divide(resultat,multiplicateur){
         MULTIPLICATEUR = -MULTIPLICATEUR
     }
 
-    for (let i=RESULTAT-1;i>1;i--){
-        if (multiply(i,MULTIPLICATEUR) < RESULTAT){
+    for (let i=RESULTAT-1;i>=1;i--){
+        if (multiply(i,MULTIPLICATEUR) <= RESULTAT){
+            console.log("i:",i)
             resultatDivision += i
-            RESULTAT -= i
+            console.log("division:",resultatDivision)
+            RESULTAT -= multiply(i,MULTIPLICATEUR)
+            console.log("resultat:",RESULTAT)
         }
     }
 
@@ -70,5 +73,5 @@ function modulo(number,number1){
     let calcul =number - (multiply((Math.round(divide(number,number1))),number1))
     return calcul
 }   
-console.log(divide(-78,-34))
+console.log(divide(235,5))
 
