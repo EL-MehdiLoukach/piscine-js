@@ -8,7 +8,7 @@ function repeat(words,number){
     }
 
     for (let i=0;i<=numbers;i++){
-        stockWords += words
+        stockWords += words + " "
     }
 
     return stockWords
