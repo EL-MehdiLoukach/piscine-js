@@ -6,7 +6,7 @@ function dogYears(planet,yearSeconds){
         return b
     }else if (planet == "mercury"){
         let second = 0.2408467 * 31557600
-        let multiplicateur = 0.2408467 * 7
+        let multiplicateur = 7
         let result = yearSeconds / second / multiplicateur
         let a = result.toFixed(2)
         let b = parseFloat(a)
