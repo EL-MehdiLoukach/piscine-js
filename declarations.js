@@ -3,7 +3,7 @@ const arr = [4,'2']
 
 const obj = {
     str : String,
-    num : Int,
+    num : Number,
     bool : Boolean,
     undef : undefined,
 }
