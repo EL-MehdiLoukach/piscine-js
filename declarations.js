@@ -11,9 +11,9 @@ const obj = {
 const nested = {
     arr : [4,undefined,'2'],
     obj : {
-        str: "hello",
-        num : 5,
-        bool: true,
+        str: String,
+        num : Number,
+        bool: Boolean,
     }
 }
 
