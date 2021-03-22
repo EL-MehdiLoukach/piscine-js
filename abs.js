@@ -13,7 +13,7 @@ function abs(number){
         return 0
     }else{
         let compteur = 0
-        for(let i = 0;i >= number;i--){
+        for(let i = 0;i > number;i--){
             compteur += 1
         }
 
