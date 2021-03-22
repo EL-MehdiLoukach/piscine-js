@@ -11,7 +11,7 @@ function indexOf(array,valueInArray,number){
             compteur +=1
         }
 
-        if (compteur==number && number != 0){
+        if (compteur==number+1){
             return i
         }
        
