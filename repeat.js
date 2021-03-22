@@ -7,9 +7,11 @@ function repeat(words,number){
         return RangeError
     }
 
-    for (let i=0;i<=numbers;i++){
-        stockWords += words + " "
+    for (let i=0;i<numbers;i++){
+        stockWords += words
     }
 
     return stockWords
 }
+
+console.log(repeat("a",3))
