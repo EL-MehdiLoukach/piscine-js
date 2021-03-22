@@ -9,7 +9,7 @@ const obj = {
 }
 
 const nested = {
-    arr : [],
+    arr : [4,undefined,'2'],
     obj : obj
 }
 
