@@ -12,11 +12,10 @@ function abs(number){
     }else if (number ==0){
         return 0
     }else{
-        let compteur = 0
-        for(let i = 0;i > number;i--){
-            compteur += 1
-        }
+        word = number.toString()
+        a= word.substr(1,word.length -1)
+        b = parseInt(a)
 
-        return compteur
+        return b
     }
 }
