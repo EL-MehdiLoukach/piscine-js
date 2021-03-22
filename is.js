@@ -6,4 +6,5 @@ is.num = function(number){
     if (a=="string"){
         return true
     }
+    return false
 }
