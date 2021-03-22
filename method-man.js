@@ -30,9 +30,9 @@ function capitalize(word){
     let maj =word[0]
     maj = maj.toUpperCase()
 
-    number = word.length -1
+    let number = word.length -1
     
-    min = str.substr(1,number)
+    let min = str.substr(1,number)
     min = min.toLowerCase()
     let words = maj + min
     return words
