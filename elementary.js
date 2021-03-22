@@ -43,7 +43,7 @@ function divide(number,number1){
 }
 
 function modulo(number,number1){
-    let calcul =number - (multiply((Math.round(number/number1)),number1))
+    let calcul =number - (multiply((Math.round(divide(number/number1))),number1))
     return calcul
 }   
 console.log(multiply(-22,-123))
