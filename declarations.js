@@ -18,5 +18,5 @@ const nested = {
     }
 }
 Object.freeze(nested)
-Object.isFrozen(nested)
+Object.isFrozen(nested,nested.arr,nested.obj)
 
