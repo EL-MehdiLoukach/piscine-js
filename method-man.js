@@ -6,7 +6,12 @@ function words(argument){
 function sentence(table){
     let word = ""
     for (let i = 0;i < table.length; i++){
-        word += table[i] + " "
+        if (i == table.length -1 ){
+            word += table[i]
+        }else{
+            word += table[i] + " "
+        }
+        
     }
     return word
 }
