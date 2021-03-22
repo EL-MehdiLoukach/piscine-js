@@ -33,19 +33,42 @@ function multiply(number,number1){
     return calcul
 }
 
-function divide(number,number1){
-    for(let i =0;i<=number;i++){
-        if (multiply(i,number1)==number){
-            return i
+function divide(resultat,multiplicateur){
+    let resultatDivision = 0
+    let RESULTAT = resultat
+    let MULTIPLICATEUR = multiplicateur
+
+    if (multiplicateur == 0 || resultat==0){
+        return 0
+    }
+
+    if (RESULTAT < 0){
+        RESULTAT = -RESULTAT
+    }
+
+    if (MULTIPLICATEUR < 0){
+        MULTIPLICATEUR = -MULTIPLICATEUR
+    }
+
+    for (let i=RESULTAT-1;i>1;i--){
+        if (multiply(i,MULTIPLICATEUR) < RESULTAT){
+            resultatDivision += i
+            RESULTAT -= i
         }
     }
-    return 0
+
+    if (resultat < 0 || multiplicateur <0){
+        resultatDivision = -resultatDivision
+        return resultatDivision
+    }
+    
+
+    return resultatDivision
 }
 
 function modulo(number,number1){
     let calcul =number - (multiply((Math.round(divide(number,number1))),number1))
     return calcul
 }   
-console.log(multiply(-22,-123))
-//console.log(modulo(9,4))
+console.log(divide(-78,-34))
 
