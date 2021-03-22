@@ -9,7 +9,7 @@ function sign( argument){
 }
 
 function sameSign(argument1,argument2){
-    if (argument1 >= 0 && argument2 >= 0){
+    if (argument1 > 0 && argument2 > 0){
         return true
     }else if (argument1 < 0 && argument2 < 0){
         return true
