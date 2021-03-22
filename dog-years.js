@@ -1,7 +1,7 @@
 function dogYears(planet,yearSeconds){
     if (planet == "earth"){
-        let secondToMinute = Math.floor(yearSeconds)/31557600*7
-        return Math.floor(secondToMinute)
+        let secondToMinute = yearSeconds/31557600*7
+        return secondToMinute
     }else if (planet == "mercury"){
         let secondInThisPlanet = 0.2408467 * 31557600
         let multiply = 0.2408467 * 7 
