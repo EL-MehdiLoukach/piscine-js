@@ -12,9 +12,9 @@ function abs(number){
     }else if (number ==0){
         return 0
     }else{
-        word = number.toString()
-        a= word.substr(1,word.length -1)
-        b = parseInt(a)
+        let word = number.toString()
+        let a = word.substr(1,word.length -1)
+        let b = parseInt(a)
 
         return b
     }
