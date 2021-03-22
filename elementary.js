@@ -8,7 +8,7 @@ function multiply(number,number1){
 
 function divide(number,number1){
     for(let i =0;i<=number;i++){
-        if (i*number1==number){
+        if (multiply(i,number1)==number){
             return i
         }
     }
@@ -16,8 +16,9 @@ function divide(number,number1){
 }
 
 function modulo(number,number1){
-    let calcul =number - ((Math.round(number/number1))*number1)
+    let calcul =number - (multiply((Math.round(number/number1)),number1))
     return calcul
 }   
-
+console.log(divide(15,3))
 console.log(modulo(9,4))
+
