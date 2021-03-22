@@ -8,6 +8,10 @@ function slice(array,firstindex,secondIndex){
         isString = true
     }
 
+    if (secondIndex==undefined){
+        secondIndex = array.length-1
+    }
+
     if(firstindex < secondIndex){
 
         for(let i=0;i<array.length;i++){
@@ -43,4 +47,4 @@ function slice(array,firstindex,secondIndex){
     }
 }
 
-console.log(slice(["h","e","l","l","o"],4,1))
+console.log(slice('abcdef', 2))
