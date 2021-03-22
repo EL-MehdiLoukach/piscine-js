@@ -8,3 +8,12 @@ is.num = function(number){
     }
     return false
 }
+
+is.nan = function(number){
+    let a = typeof number
+
+    if (a=="NaN"){
+        return true
+    }
+    return false
+}
