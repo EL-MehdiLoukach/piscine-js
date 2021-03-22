@@ -1,5 +1,5 @@
 function isPositive(number){
-    if (number >= 0){
+    if (number > 0){
         return true
     }else{
         return false
@@ -7,7 +7,7 @@ function isPositive(number){
 }
 
 function abs(number){
-    if (number >= 0){
+    if (number > 0){
         return number
     }else{
         let compteur = 0
