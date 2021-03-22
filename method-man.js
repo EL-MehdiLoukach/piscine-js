@@ -1,4 +1,4 @@
-function word(argument){
+function words(argument){
     const a = argument.split(" ")
     return a
 }
@@ -21,7 +21,7 @@ function whisper(word){
     return arg
 }
 
-function Capitalize(word){
+function capitalize(word){
     let maj =word[0]
     maj = maj.toUpperCase()
 
