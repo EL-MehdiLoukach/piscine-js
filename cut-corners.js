@@ -78,3 +78,28 @@ function floor(number){
     }
     return NaN
 }
+
+function trunc(number){
+
+    let compteur = 0
+    let NUMBER = number
+    
+    if (number < 0){
+        NUMBER = -number
+    }
+
+    if (NUMBER %1 == 0){
+        return number
+    }
+
+    for(let i =0;i<NUMBER;i++){
+        compteur = i
+    }
+
+    if (number > 0){
+        return compteur
+    }else if (number< 0){
+        return -compteur
+    }
+    return NaN
+}
