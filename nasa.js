@@ -6,8 +6,9 @@ function nasa(number){
             if (i==number){
                 stringFinal += "NASA"
                 continue
+            }else{
+                stringFinal += "NASA "
             }
-            stringFinal += "NASA "
         }else if(i%3==0){
             stringFinal += "NA "
         }else if(i%5==0){
@@ -18,4 +19,4 @@ function nasa(number){
     }
     return stringFinal
 }
-console.log(nasa(60))
+console.log(nasa(100))
