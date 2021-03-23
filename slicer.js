@@ -8,7 +8,7 @@ function slice(array,firstindex,secondIndex){
         isString = true
     }
 
-    if (firstindex > secondIndex && isString){
+    if (firstindex > secondIndex && isString && firstindex!=0 && secondIndex != 0){
         return chaineFinal
     }else if (firstindex > secondIndex && !isString){
         return tableFinale
@@ -36,7 +36,7 @@ function slice(array,firstindex,secondIndex){
         return tableFinale
     }
 
-    if(firstindex < 0 && (secondIndex==undefined ||secondIndex<0)){
+    if(firstindex <= 0 && (secondIndex==undefined ||secondIndex<=0)){
         let a = rangeWithIndexNegative(array,firstindex,secondIndex)
         return a
     }else if (firstindex < secondIndex){
@@ -49,6 +49,10 @@ function rangeWithIndexNegative(array,firstIndex,secondIndex){
 
     if(typeof secondIndex=="undefined"){
         secondIndex= array.length-1
+    }
+
+    if (firstIndex == 0){
+        firstIndex = -array.length -1
     }
 
 
@@ -93,4 +97,4 @@ function rangeInArray(array,firstIndex,secondIndex){
     }
 }
 
-console.log(slice("The quick brown fox jumps over the lazy dog.", 31))
+console.log(slice("abcdef", 0,-2))
