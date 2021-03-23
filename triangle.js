@@ -1,22 +1,18 @@
 var stringFinal = ""
+
 function triangle(character,number){
 
+    if (number == 1){
+        stringFinal +=character
+        stringFinal +="\n"
+        return stringFinal
+    }
+    triangle(character,number-1)
     for(let i=1;i <=number;i++){
         stringFinal += character
     }
-
+    stringFinal +="\n"
     
-
-    if (number == 1){
-        stringFinal = stringFinal.split("").reverse().join("")
-        return stringFinal
-    }else{
-        stringFinal +="\n"
-    }
-
-    triangle(character,number-1)
-
-    return stringFinal
+return stringFinal
 }
-
-console.log(triangle("#",4))
+console.log(triangle("*",4))
