@@ -3,7 +3,11 @@ function nasa(number){
     for(let i= 1;i<=number;i++){
 
         if(i%3==0 && i%5==0){
-            stringFinal += "NASA"
+            if (i==number){
+                stringFinal += "NASA"
+                continue
+            }
+            stringFinal += "NASA "
         }else if(i%3==0){
             stringFinal += "NA "
         }else if(i%5==0){
@@ -14,3 +18,4 @@ function nasa(number){
     }
     return stringFinal
 }
+console.log(nasa(60))
