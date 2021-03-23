@@ -1,6 +1,6 @@
 function nasa(number){
     let stringFinal =""
-    for(let i= 1;i<=number;i++){
+    for(let i= 1;i<number;i++){
 
         if(i%3==0 && i%5==0){
             if (i==number){
