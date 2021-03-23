@@ -1,28 +1,44 @@
-function nasa(number){
-    let stringFinal =""
-    for(let i= 1;i<=number;i++){
+function nasa (number){
+    let stringFinal = ""
+    for(let i=1;i<=number;i++){
 
-        if(i%3==0 && i%5==0){
-            if (i==number){
+        if (i%5==0&&i%3==0){
+            if(i==number){
                 stringFinal += "NASA"
             }else{
-                stringFinal += "NASA "
+                stringFinal += "NASA" + " "
             }
             continue
         }
-        
-        if(i%3==0){
-            stringFinal += "NA "
+
+        if (i%3==0){
+            if(i == number){
+                stringFinal +="NA"  
+            }else{
+                stringFinal +="NA" + " "
+            }
             continue
         }
 
         if (i%5==0){
-            stringFinal += "SA "
+            if(i == number){
+                stringFinal +="SA"  
+            }else{
+                stringFinal +="SA" + " "
+            }
             continue
         }
-        
-        stringFinal += i.toString() + " "
+
+        if (i == number){
+            stringFinal += i.toString()
+        }else{
+            stringFinal += i.toString()+ " "
+        }
+
         
     }
+
     return stringFinal
 }
+
+console.log(nasa(100))
