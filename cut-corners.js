@@ -103,3 +103,4 @@ function trunc(number){
     }
     return NaN
 }
+
