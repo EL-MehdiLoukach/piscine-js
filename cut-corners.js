@@ -44,3 +44,12 @@ function ceil(number){
     for(let i =0;i<NUMBER;i++){
         compteur = i
     }
+
+    if (number > 0){
+        return compteur + 1
+    }else if (number< 0){
+        return -compteur
+    }
+
+    return NaN
+}
