@@ -5,10 +5,13 @@ function triangle(character,number){
         stringFinal += character
     }
 
-    stringFinal +="\n"
+    
 
     if (number == 1){
+        stringFinal = stringFinal.split("").reverse().join("")
         return stringFinal
+    }else{
+        stringFinal +="\n"
     }
 
     triangle(character,number-1)
@@ -16,4 +19,4 @@ function triangle(character,number){
     return stringFinal
 }
 
-console.log(triangle("#",2))
+console.log(triangle("#",4))
