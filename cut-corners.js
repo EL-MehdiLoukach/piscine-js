@@ -1,13 +1,13 @@
 function round(number){
-
-    if (typeof number!=Number){
-        return NaN
-    }
     let compteur = 0
     let NUMBER = number
 
     if (number < 0){
         NUMBER = -number
+    }
+    
+    if (NUMBER %1 == 0){
+        return number
     }
 
     for(let i = 0;i<NUMBER;i++){
@@ -25,12 +25,11 @@ function round(number){
         }
         return compteur
     }
+
+    return NaN
 }
 
 function ceil(number){
-    if (typeof number!=Number){
-        return NaN
-    }
 
     let compteur = 0
     let NUMBER = number
@@ -52,12 +51,10 @@ function ceil(number){
     }else{
         return -compteur
     }
+    return NaN
 }
 
 function floor(number){
-    if (typeof number!=Number){
-        return NaN
-    }
 
     let compteur = 0
     let NUMBER = number
@@ -79,12 +76,10 @@ function floor(number){
     }else{
         return -compteur - 1
     }
+    return NaN
 }
 
 function trunc(number){
-    if (typeof number!=Number){
-        return NaN
-    }
 
     let compteur = 0
     let NUMBER = number
@@ -102,4 +97,5 @@ function trunc(number){
     }else{
         return -compteur
     }
+    return NaN
 }
