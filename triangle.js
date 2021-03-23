@@ -13,8 +13,9 @@ function triangle(character,number){
     }
 
     stringFinal +="\n"
+    let a = stringFinal.slice(0,stringFinal.length-1)
 
-    return stringFinal
+    return a
 
 }
 console.log(triangle("*",4))
