@@ -1,4 +1,4 @@
-function chunky(array,size){
+function chunk(array,size){
 
     let tableFinal = []
 
@@ -13,5 +13,3 @@ function chunky(array,size){
    
     console.log(tableFinal)
 }
-
-chunky([5,4,8,7,2,5,6,89],3)
