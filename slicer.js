@@ -62,7 +62,6 @@ function rangeWithIndexNegative(array,firstIndex,secondIndex){
     let compteur = 0
 
     for(let i=array.length-1;i>=0;i--){
-
         if(a==0 && secondIndex <=0){
             if(compteur>=(-secondIndex)){
                 if(typeof array=="string"){
