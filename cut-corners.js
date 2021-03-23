@@ -104,3 +104,4 @@ function trunc(number){
     return NaN
 }
 
+console.log(round(4.5))
