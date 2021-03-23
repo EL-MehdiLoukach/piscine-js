@@ -1,6 +1,6 @@
 function round(number){
 
-    if (typeof number!="number"){
+    if (typeof number!=Number){
         return NaN
     }
     let compteur = 0
@@ -28,7 +28,7 @@ function round(number){
 }
 
 function ceil(number){
-    if (typeof number!="number"){
+    if (typeof number!=Number){
         return NaN
     }
 
@@ -55,7 +55,7 @@ function ceil(number){
 }
 
 function floor(number){
-    if (typeof number!="number"){
+    if (typeof number!=Number){
         return NaN
     }
 
@@ -82,7 +82,7 @@ function floor(number){
 }
 
 function trunc(number){
-    if (typeof number!="number"){
+    if (typeof number!=Number){
         return NaN
     }
 
