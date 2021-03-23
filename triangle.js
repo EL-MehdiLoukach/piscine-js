@@ -18,4 +18,3 @@ function triangle(character,number){
     return a
 
 }
-console.log(triangle("*",4))
