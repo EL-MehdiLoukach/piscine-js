@@ -10,7 +10,7 @@ function slice(array,firstindex,secondIndex){
 
     if (firstindex > secondIndex && isString && firstindex!=0 && secondIndex != 0){
         return chaineFinal
-    }else if (firstindex > secondIndex && !isString){
+    }else if (firstindex > secondIndex && !isString&& firstindex!=0 && secondIndex != 0){
         return tableFinale
     }
 
@@ -51,16 +51,27 @@ function rangeWithIndexNegative(array,firstIndex,secondIndex){
         secondIndex= array.length-1
     }
 
+    let a = firstIndex
+
     if (firstIndex == 0){
         firstIndex = -array.length -1
     }
 
-
     let table = []
     let chaine =""
     let compteur = 0
+
     for(let i=array.length-1;i>=0;i--){
-        if (compteur<(-firstIndex) && compteur>=(-secondIndex)){
+
+        if(a==0 && secondIndex <=0){
+            if(compteur>=(-secondIndex)){
+                if(typeof array=="string"){
+                    chaine += array[i]
+                }else{
+                    table.push(array[i])
+                } 
+            }
+        }else if (compteur<(-firstIndex) && compteur>=(-secondIndex)){
             if(typeof array=="string"){
                 chaine += array[i]
             }else{
@@ -97,4 +108,4 @@ function rangeInArray(array,firstIndex,secondIndex){
     }
 }
 
-console.log(slice("abcdef", 0,-2))
+console.log(slice([1, 2, 3, 4, 5, 6], 0, -2))
