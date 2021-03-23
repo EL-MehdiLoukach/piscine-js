@@ -88,6 +88,11 @@ function trunc(number){
         NUMBER = -number
     }
 
+    if (NUMBER %1 == 0){
+        return number
+    }
+
+
     for(let i =0;i<NUMBER;i++){
         compteur = i
     }
