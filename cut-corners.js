@@ -3,56 +3,55 @@ function round(number){
     if (typeof number!="number"){
         return NaN
     }
-    
-    let result = 0
-    let stringNumber = number.toString()
-    let stockStringNum = ""
+    let compteur = 0
+    let NUMBER = number
 
-    for(let i=0;i<=stringNumber.length-1;i++){
-        if (stringNumber[i] =="."){
-            if (stringNumber[i+1]>=5){
-                stockStringNum = rangeInArray(stringNumber,0,i)
-                if (number<=0){
-                    result = parseInt(stockStringNum) - 1
-                }else{
-                    result = parseInt(stockStringNum) + 1
-                }
-                return result
-            }else{
-                stockStringNum = rangeInArray(stringNumber,0,i)
-                result = parseInt(stockStringNum)
-                return result
-            }
-        }
+    if (number < 0){
+        NUMBER = -number
     }
 
-    return number
+    for(let i = 0;i<NUMBER;i++){
+        compteur = i
+    }
+
+    if(NUMBER%1>=0.5){
+        if (number < 0){
+            return -compteur-1
+        }
+        return compteur + 1
+    }else{
+        if(number < 0){
+            return-compteur
+        }
+        return compteur
+    }
 }
 
 function ceil(number){
-
     if (typeof number!="number"){
         return NaN
     }
 
-    let result = 0
-    let stringNumber = number.toString()
-    let stockStringNum = ""
-
-    for(let i=0;i<stringNumber.length;i++){
-        if (stringNumber[i]=="."){
-            stockStringNum = rangeInArray(stringNumber,0,i)
-            if(number>=0){
-                result = parseInt(stockStringNum)
-                return result +1 
-            }else{
-                result = parseInt(stockStringNum)
-                return result -1 
-            }
-        }
-        
+    let compteur = 0
+    let NUMBER = number
+    
+    if (number < 0){
+        NUMBER = -number
     }
-    return number
+
+    if (NUMBER %1 == 0){
+        return number
+    }
+
+    for(let i =0;i<NUMBER;i++){
+        compteur = i
+    }
+
+    if (number > 0){
+        return compteur + 1
+    }else{
+        return -compteur
+    }
 }
 
 function floor(number){
@@ -60,24 +59,26 @@ function floor(number){
         return NaN
     }
 
-    let result = 0
-    let stringNumber = number.toString()
-    let stockStringNum = ""
-
-    for(let i=0;i<stringNumber.length;i++){
-        if (stringNumber[i]=="."){
-            stockStringNum = rangeInArray(stringNumber,0,i)
-            if(number>=0){
-                result = parseInt(stockStringNum)
-                return result 
-            }else{
-                result = parseInt(stockStringNum)
-                return result -1
-            }
-        }
-        
+    let compteur = 0
+    let NUMBER = number
+    
+    if (number < 0){
+        NUMBER = -number
     }
-    return number
+
+    if (NUMBER %1 == 0){
+        return number
+    }
+
+    for(let i =0;i<NUMBER;i++){
+        compteur = i
+    }
+
+    if (number > 0){
+        return compteur
+    }else{
+        return -compteur - 1
+    }
 }
 
 function trunc(number){
@@ -85,31 +86,20 @@ function trunc(number){
         return NaN
     }
 
-    let result = 0
-    let stringNumber = number.toString()
-    let stockStringNum = ""
-
-    for(let i=0;i<stringNumber.length;i++){
-        if (stringNumber[i]=="."){
-            stockStringNum = rangeInArray(stringNumber,0,i)
-            result = parseInt(stockStringNum)
-            return result
-        }
+    let compteur = 0
+    let NUMBER = number
+    
+    if (number < 0){
+        NUMBER = -number
     }
-    return number
-}
 
+    for(let i =0;i<NUMBER;i++){
+        compteur = i
+    }
 
-function rangeInArray(array,firstIndex,secondIndex){
-    if (typeof array=="string"){
-        let chaine = ""
-        for(let i = 0;i<array.length;i++){
-            if (i >=firstIndex && i <secondIndex){
-                chaine += array[i]
-            }
-        }
-        return chaine
+    if (number > 0){
+        return compteur
+    }else{
+        return -compteur
     }
 }
-
-console.log(trunc(-0.05))
