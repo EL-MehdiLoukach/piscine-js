@@ -80,7 +80,7 @@ function floor(number){
 }
 
 function trunc(number){
-    
+
     return number - (number%1)
 }
 
@@ -95,5 +95,3 @@ console.log(trunc(0.123));
 
 console.log(trunc(-0.123));
 // expected output: -0
-
-console.log(trunc("hd"))
