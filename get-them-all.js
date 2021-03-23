@@ -1,37 +1,50 @@
-
-
 export function getArchitects(){
-let architectArray = []
-let noArchitectArray =[]
-let tableFinal = []
-let linkArray = document.getElementsByTagName("a")
-let spanArray= document.getElementsByTagName('span')
+    let architectArray = [...document.getElementsByTagName("a")]
+    let noArchitectArray = [...document.getElementsByTagName("span")];
+    let tableFinal = []
 
-for(let i = 0;i<linkArray.length;i++){
-    let idLink = linkArray[i].getAttribute('id')
-    architectArray.push(idLink)
-}
 
-for(let i=0;i<spanArray.length;i++){
-    let idSpan = spanArray[i].getAttribute('id')
-    noArchitectArray.push(idSpan)
-}
+    tableFinal.push(architectArray,noArchitectArray)
 
-tableFinal.push(architectArray,noArchitectArray)
-
-console.log(tableFinal)
-
-return tableFinal
+    return tableFinal
 }
 
 export function getClassical(){
+    let allClassical = [...document.querySelectorAll(".classical")]
+    let noClassical = [...document.querySelectorAll("span,a:not(.classical)")]
 
+    let tableFinal = [] 
+    tableFinal.push(allClassical,noClassical)
+
+    return tableFinal
 }
 
 export function getActive(){
-    
+
+    let actives = [...document.querySelectorAll(".classical.active")]
+    let noActives = [...document.querySelectorAll("a:not(.classical.active)")]
+
+    let tableFinal = []
+
+    tableFinal.push(actives,noActives)
+
+    return tableFinal
 }
 
 export function getBonannoPisano(){
-    
+
+    let bonannoPisano = document.getElementById("BonannoPisano")
+    let noPisano = [...document.querySelectorAll(".classical.active")]
+
+    for(let i = 0;i<noPisano.length;i++){
+        if(noPisano[i].getAttribute('id')=="BonannoPisano")[
+            noPisano.splice(i,1)
+        ]
+    }
+
+    let tableFinal = []
+
+    tableFinal.push(bonannoPisano,noPisano)
+
+    return tableFinal
 }
