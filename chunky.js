@@ -10,6 +10,5 @@ function chunk(array,size){
         tableFinal = array.slice(-size)
     }
 
-   
-    console.log(tableFinal)
+    return tableFinal
 }
