@@ -103,5 +103,3 @@ function trunc(number){
     }
     return NaN
 }
-
-console.log(round("fdsfs"))
