@@ -11,7 +11,7 @@ function round(number){
     for(let i=0;i<=stringNumber.length-1;i++){
         if (stringNumber[i] =="."){
             if (stringNumber[i+1]>=5){
-                stockStringNum = stringNumber.slice(0,i)
+                stockStringNum = rangeInArray(stringNumber,0,i)
                 if (number<=0){
                     result = parseInt(stockStringNum) - 1
                 }else{
@@ -19,7 +19,7 @@ function round(number){
                 }
                 return result
             }else{
-                stockStringNum = stringNumber.slice(0,i)
+                stockStringNum = rangeInArray(stringNumber,0,i)
                 result = parseInt(stockStringNum)
                 return result
             }
@@ -41,7 +41,7 @@ function ceil(number){
 
     for(let i=0;i<stringNumber.length;i++){
         if (stringNumber[i]=="."){
-            stockStringNum = stringNumber.slice(0,i)
+            stockStringNum = rangeInArray(stringNumber,0,i)
             if(number>=0){
                 result = parseInt(stockStringNum)
                 return result +1 
@@ -66,7 +66,7 @@ function floor(number){
 
     for(let i=0;i<stringNumber.length;i++){
         if (stringNumber[i]=="."){
-            stockStringNum = stringNumber.slice(0,i)
+            stockStringNum = rangeInArray(stringNumber,0,i)
             if(number>=0){
                 result = parseInt(stockStringNum)
                 return result 
@@ -91,12 +91,25 @@ function trunc(number){
 
     for(let i=0;i<stringNumber.length;i++){
         if (stringNumber[i]=="."){
-            stockStringNum = stringNumber.slice(0,i)
+            stockStringNum = rangeInArray(stringNumber,0,i)
             result = parseInt(stockStringNum)
             return result
         }
     }
     return number
+}
+
+
+function rangeInArray(array,firstIndex,secondIndex){
+    if (typeof array=="string"){
+        let chaine = ""
+        for(let i = 0;i<array.length;i++){
+            if (i >=firstIndex && i <secondIndex){
+                chaine += array[i]
+            }
+        }
+        return chaine
+    }
 }
 
 console.log(trunc(-0.05))
