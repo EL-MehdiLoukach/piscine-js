@@ -14,5 +14,3 @@ function nasa(number){
     }
     return stringFinal
 }
-
-console.log(nasa(15))
