@@ -19,12 +19,13 @@ function round(number){
             return -compteur-1
         }
         return compteur + 1
-    }else{
+    }else if (NUMBER%1<0.5){
         if(number < 0){
             return-compteur
         }
         return compteur
     }
+    return NaN
 }
 
 function ceil(number){
@@ -46,9 +47,11 @@ function ceil(number){
 
     if (number > 0){
         return compteur + 1
-    }else{
+    }else if (number< 0){
         return -compteur
     }
+
+    return NaN
 }
 
 function floor(number){
@@ -70,9 +73,10 @@ function floor(number){
 
     if (number > 0){
         return compteur
-    }else{
+    }else if (number< 0){
         return -compteur - 1
     }
+    return NaN
 }
 
 function trunc(number){
@@ -94,9 +98,10 @@ function trunc(number){
 
     if (number > 0){
         return compteur
-    }else{
+    }else if (number< 0){
         return -compteur
     }
+    return NaN
 }
 
-console.log(trunc(-4))
+console.log(round("fdsfs"))
