@@ -6,6 +6,5 @@ function chunk(array,size){
         tableFinal.push(array.slice(i,i+size))
     }
     
-
     return tableFinal
 }
