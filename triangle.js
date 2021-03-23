@@ -1,8 +1,8 @@
 var stringFinal = ""
-function triangle(number){
+function triangle(character,number){
 
     for(let i=1;i <=number;i++){
-        stringFinal += "*"
+        stringFinal += character
     }
 
     stringFinal +="\n"
@@ -11,9 +11,9 @@ function triangle(number){
         return stringFinal
     }
 
-    triangle(number-1)
+    triangle(character,number-1)
 
     return stringFinal
 }
 
-console.log(triangle(2))
+console.log(triangle("#",2))
