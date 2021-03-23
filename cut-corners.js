@@ -25,8 +25,6 @@ function round(number){
         }
         return compteur
     }
-
-    return NaN
 }
 
 function ceil(number){
@@ -51,7 +49,6 @@ function ceil(number){
     }else{
         return -compteur
     }
-    return NaN
 }
 
 function floor(number){
@@ -76,7 +73,6 @@ function floor(number){
     }else{
         return -compteur - 1
     }
-    return NaN
 }
 
 function trunc(number){
@@ -92,7 +88,6 @@ function trunc(number){
         return number
     }
 
-
     for(let i =0;i<NUMBER;i++){
         compteur = i
     }
@@ -102,5 +97,6 @@ function trunc(number){
     }else{
         return -compteur
     }
-    return NaN
 }
+
+console.log(trunc(-4))
