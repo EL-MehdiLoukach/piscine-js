@@ -34,7 +34,7 @@ export function repair(listIds){
 
         let element = document.getElementById(listIds)
         let a = element.getAttributeNode("foundation")
-        if(a ==true){
+        if(a.value == "true"){
             element.setAttribute("repaired","in progress")
         }else{
             element.setAttribute("repaired","true")
