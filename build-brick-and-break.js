@@ -26,7 +26,7 @@ function buildIntervall(number){
 }
 
 export function repair(listIds){
-
+    console.log(listIds)
     for(let i =0;i<listIds.length;i++){
         let element = document.getElementById(listIds[i])
         let a = element.dataset.foundation
