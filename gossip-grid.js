@@ -1,22 +1,19 @@
 import {gossips} from "./gossip-grid.data.js"
 
-let isCreate = true
 
 export function grid(){
     let body = document.querySelector("body")
 
+    createRange()
     createForm()
-   createRange()
 
-    if (isCreate){
-        for(let i=0;i<gossips.length;i++){
-            let elementDiv = document.createElement("div")
-            elementDiv.setAttribute("class","gossip")
-            elementDiv.innerText = gossips[i]
-            body.append(elementDiv)
-        }
-        isCreate = false
+    for(let i=0;i<gossips.length;i++){
+        let elementDiv = document.createElement("div")
+        elementDiv.setAttribute("class","gossip")
+        elementDiv.innerText = gossips[i]
+        body.append(elementDiv)
     }
+
 }
 
 function createRange(){
@@ -87,11 +84,15 @@ function createForm(){
         let elDiv = document.createElement("div")
         elDiv.setAttribute("class","gossip")
         elDiv.innerText = elementTextArea.value
-        body.append(elDiv)
+        insertAfter(elementForm,elDiv)
         elementTextArea.value = ""
         event.preventDefault()
     })
 
     elementForm.append(elementTextArea,elementButton)
     body.append(elementForm)
+}
+
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
