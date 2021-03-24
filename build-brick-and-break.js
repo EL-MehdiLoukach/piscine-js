@@ -28,9 +28,9 @@ function buildIntervall(number){
 export function repair(listIds){
 
     for(let i =0;i<listIds.length;i++){
-        let element = document.getElementById(listIds)
+        let element = document.getElementById(listIds[i])
         let a = element.dataset.foundation
-        
+
         if(a  == "true"){
             element.dataset.repaired = "in progress"
         }else{
