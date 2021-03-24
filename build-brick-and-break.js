@@ -27,16 +27,16 @@ function buildIntervall(number){
 
 export function repair(listIds){
 
+    for(let i =0;i<listIds.length;i++){
         let element = document.getElementById(listIds)
         let a = element.dataset.foundation
-
-        console.log(a)
-
+        
         if(a  == "true"){
             element.dataset.repaired = "in progress"
         }else{
             element.dataset.repaired = "true"
         }
+    }  
 }
 
 export function destroy(){
