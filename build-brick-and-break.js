@@ -20,7 +20,7 @@ function buildIntervall(number){
     element.setAttribute('id',idName)
 
     if (MEGACOMPTEUR%3==2){
-        element.dataset.foundation = true
+        element.dataset.foundation = "true"
     }
     body.append(element)
 }
@@ -28,7 +28,9 @@ function buildIntervall(number){
 export function repair(listIds){
 
         let element = document.getElementById(listIds)
-        let a = element.getAttributeNode("foundation")
+        let a = element.dataset.foundation
+
+        console.log(a)
 
         if(a.value == "true"){
             element.dataset.repaired = "in progress"
