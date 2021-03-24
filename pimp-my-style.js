@@ -16,11 +16,11 @@ export function pimp(){
         compteurInv = styles.length -1
     }
 
-    if (reverse){
+    if (compteur == styles.length && !reverse){
+        element[0].classList.toggle("unpimp")
+    }
 
-        if (compteurInv==styles.length-1){
-            element[0].classList.toggle("unpimp")
-        }
+    if (reverse){
 
         if (compteurInv >= 0){
             element[0].classList.remove(styles[compteurInv])
