@@ -33,7 +33,7 @@ export function repair(listIds){
         if(a.value == "true"){
             element.dataset.repaired = "in progress"
         }else{
-            element.dataset.repaired = true
+            element.dataset.repaired = "true"
         }
 }
 
