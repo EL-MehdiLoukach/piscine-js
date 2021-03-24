@@ -25,18 +25,19 @@ function buildIntervall(number){
     body.append(element)
 }
 
-export function repair(listIds){
-    console.log(listIds)
-    for(let i =0;i<listIds.length;i++){
-        let element = document.getElementById(listIds[i])
-        let a = element.dataset.foundation
-
-        if(a  == "true"){
-            element.dataset.repaired = "in progress"
+export function repair(...listIds){
+    for (let i = 0; i < listIds.length; i++) {
+        let elem = document.getElementById(listIds[i])
+        // console.log(elem.getAttribute("foundation"))
+        let n = listIds[i].replace('brick-', '')
+        if(n%3===2){
+            elem.setAttribute('data-repaired',"in progress")
+            elem.innerHTML = n
         }else{
-            element.dataset.repaired = "true"
+            elem.setAttribute("data-repaired","true")
+            elem.innerHTML = n
         }
-    }  
+    }
 }
 
 export function destroy(){
