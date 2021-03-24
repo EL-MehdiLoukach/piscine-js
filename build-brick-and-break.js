@@ -15,13 +15,12 @@ function buildIntervall(number){
         return 
     }
 
-
     let element = document.createElement("div")
     let idName = "brick-" + MEGACOMPTEUR.toString()
     element.setAttribute('id',idName)
 
     if (MEGACOMPTEUR%3==2){
-        element.setAttribute("foundation","true")
+        element.dataset.foundation = true
     }
     body.append(element)
 }
@@ -32,12 +31,10 @@ export function repair(listIds){
         let a = element.getAttributeNode("foundation")
 
         if(a.value == "true"){
-            element.setAttribute("repaired","in progress")
+            element.dataset.repaired = "in progress"
         }else{
-            element.setAttribute("repaired","true")
+            element.dataset.repaired = true
         }
-    
-
 }
 
 export function destroy(){
