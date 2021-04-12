@@ -9,6 +9,7 @@ function triangle(word,number){
             }
         }
     }
+  return theTriangle
 }
 
 /*let stringFinal = ""
