@@ -21,13 +21,14 @@ function nasa(number){
                 chaine +="SA "
             }
         }else{
-            chaine += i.toString()
+            chaine += i.toString() + " "
         }
     }
     return chaine
 }
 
 console.log(nasa(10))
+
 /*function nasa (number){
     let stringFinal = ""
     for(let i=1;i<=number;i++){
