@@ -20,7 +20,6 @@ function indexOf(array,value,number){
 }
 
 function lastIndexOf(array,value,number){
-    let compteur = 0
     for(let i = array.length-1;i>=0;i--){
 
         if (number == undefined){
@@ -28,11 +27,8 @@ function lastIndexOf(array,value,number){
                 return i
             }
         }else{
-            if (array[i]==value){
-                compteur++
-            }
-            if (compteur == number + 1){
-                return i
+            if (array[i]==value && i == number){
+                return i 
             }
         }
     }
@@ -47,7 +43,6 @@ function includes(array,value){
     }
     return false
 }
-
 /*function indexOf(array,valueInArray,number){
     let compteur = 0
 
