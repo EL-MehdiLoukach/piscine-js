@@ -1,5 +1,5 @@
 function nasa(number){
-    chaine = ""
+    let chaine = ""
     for (let i =1;i <= number;i++){
         if (i%3 ==0 && i%5==0){
             if(i== number){
@@ -28,7 +28,6 @@ function nasa(number){
 }
 
 console.log(nasa(10))
-
 /*function nasa (number){
     let stringFinal = ""
     for(let i=1;i<=number;i++){
