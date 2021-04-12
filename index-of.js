@@ -1,28 +1,4 @@
-function indexOf(array, value, fromIndex = 0){
-    for (let i = fromIndex; i < array.length; i++){
-        if (array[i] == value){
-            return i
-        }
-    }return -1
-}
-
-function lastIndexOf(array, value, fromIndex = array.length - 1){
-    for (let i = fromIndex; i >= 0; i--){
-        if (array[i] == value){
-            return i
-        }
-    }
-    return -1
-}
-
-function includes(array, value){
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] == value) {
-            return true
-        }
-    } return false
-}
-/*function indexOf(array,valueInArray,number){
+function indexOf(array,valueInArray,number){
     let compteur = 0
 
     for(let i=0;i<=array.length-1;i++){
@@ -83,4 +59,4 @@ function includes(array, number){
     return false
 }
 
-console.log(lastIndexOf([0, 0, "t", "t"], "t", 3))*/
+console.log(lastIndexOf([0, 0, "t", "t"], "t", 3))
