@@ -1,17 +1,9 @@
-function repeat(words,number){
-    let stockWords = ""
-    let numbers = parseInt(number)
-    if (number==0){
-        return ""
-    }else if (number<0){
-        return RangeError
+function repeat(String, number){
+    let message = ""
+
+    for (let i = 0;i<number;i++){
+        message+=String
     }
 
-    for (let i=0;i<numbers;i++){
-        stockWords += words
-    }
-
-    return stockWords
+    return message
 }
-
-console.log(repeat("a",3))
