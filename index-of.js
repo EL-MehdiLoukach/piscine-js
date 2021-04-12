@@ -1,28 +1,27 @@
-function indexOf(array, value){
-    for (let i = 0; i < array.length; i++){
-        if (array[i] == value){
+function indexOf(element, value){
+    for (let i = 0; i < element.length; i++){
+        if (element[i] == value){
             return i
         }
     }return -1
 }
 
-function lastIndexOf(array, value){
-    for (let i = array.length - 1; i >= 0; i--){
-        if (array[i] == value){
+function lastIndexOf(element, value){
+    for (let i = element.length - 1; i >= 0; i--){
+        if (element[i] == value){
             return i
         }
     }
     return -1
 }
 
-function includes(array, value){
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] == value) {
+function includes(arrelementay, value){
+    for (let i = 0; i < element.length; i++) {
+        if (element[i] == value) {
             return true
         }
     } return false
 }
-
 /*function indexOf(array,valueInArray,number){
     let compteur = 0
 
