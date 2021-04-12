@@ -11,7 +11,7 @@ function indexOf(array,value,number){
                 compteur++
             }
 
-            if (compteur == number){
+            if (compteur == number + 1){
                 return i
             }
         }
@@ -31,7 +31,7 @@ function lastIndexOf(array,value,number){
             if (array[i]==value){
                 compteur++
             }
-            if (compteur == number){
+            if (compteur == number + 1){
                 return i
             }
         }
@@ -47,7 +47,6 @@ function includes(array,value){
     }
     return false
 }
-
 
 /*function indexOf(array,valueInArray,number){
     let compteur = 0
