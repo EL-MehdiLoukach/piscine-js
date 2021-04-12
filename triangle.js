@@ -1,5 +1,17 @@
+function triangle(word,number){
+    theTriangle = ""
+    for (let i=1;i <=number;i++){
+        for (let j =1;j<=i;j++){
+            theTriangle+=word
 
-let stringFinal = ""
+            if (j == i && i != number){
+                theTriangle += '\n'
+            }
+        }
+    }
+}
+
+/*let stringFinal = ""
 let compteur = 0
 function triangle(character,number){
     
@@ -25,4 +37,4 @@ function triangle(character,number){
     }
 }
 
-console.log(triangle("b",5))
+console.log(triangle("b",5))*/
