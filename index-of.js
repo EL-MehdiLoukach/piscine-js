@@ -1,16 +1,39 @@
-function indexOf(array,value){
+function indexOf(array,value,number){
+    let compteur =0 
     for (let i=0;i <array.length;i++){
-        if (value == array[i]){
-            return i
+
+        if (number == undefined){
+            if (value == array[i]){
+                return i
+            }
+        }else{
+            if (value == array[i]){
+                compteur++
+            }
+
+            if (compteur == number){
+                return i
+            }
         }
     }
     return -1
 }
 
-function lastIndexOf(array,value){
+function lastIndexOf(array,value,number){
+    let compteur = 0
     for(let i = array.length-1;i>=0;i--){
-        if (array[i]==value){
-            return i
+
+        if (number == undefined){
+            if (array[i]==value){
+                return i
+            }
+        }else{
+            if (array[i]==value){
+                compteur++
+            }
+            if (compteur == number){
+                return i
+            }
         }
     }
     return -1
