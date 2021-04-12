@@ -1,15 +1,15 @@
-function max(number1,number2){
-    if (number1 > number2){
-        return number1
+function max(arg1,arg2){
+    if(arg1 > arg2){
+        return arg1
     }else{
-        return number2
+        return arg2
     }
 }
 
-function min(number1,number2){
-    if (number1 > number2){
-        return number2
+function min(arg1,arg2){
+    if(arg1 > arg2){
+        return arg2
     }else{
-        return number1
+        return arg1
     }
 }
