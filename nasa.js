@@ -1,35 +1,4 @@
-function nasa(number){
-    let chaine = ""
-    for (let i =1;i <= number;i++){
-        if (i%3 ==0 && i%5==0){
-            if(i== number){
-                chaine +="NASA"
-            }else{
-                chaine +="NASA "
-            }
-            
-        }else if (i%3==0){
-            if(i== number){
-                chaine +="NA"
-            }else{
-                chaine +="NA "
-            }
-        }else if (i%5 == 0){
-            if(i== number){
-                chaine +="SA"
-            }else{
-                chaine +="SA "
-            }
-        }else{
-            chaine += i.toString() + " "
-        }
-    }
-    return chaine
-}
-
-console.log(nasa(10))
-
-/*function nasa (number){
+function nasa (number){
     let stringFinal = ""
     for(let i=1;i<=number;i++){
 
@@ -72,4 +41,4 @@ console.log(nasa(10))
     return stringFinal
 }
 
-console.log(nasa(100))*/
+console.log(nasa(100))
