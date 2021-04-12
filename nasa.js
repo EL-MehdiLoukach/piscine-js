@@ -2,11 +2,24 @@ function nasa(number){
     chaine = ""
     for (let i =1;i <= number;i++){
         if (i%3 ==0 && i%5==0){
-            chaine +="NASA"
+            if(i== number){
+                chaine +="NASA"
+            }else{
+                chaine +="NASA "
+            }
+            
         }else if (i%3==0){
-            chaine += "NA"
+            if(i== number){
+                chaine +="NA"
+            }else{
+                chaine +="NA "
+            }
         }else if (i%5 == 0){
-            chaine += "SA"
+            if(i== number){
+                chaine +="SA"
+            }else{
+                chaine +="SA "
+            }
         }else{
             chaine += i.toString()
         }
@@ -14,6 +27,7 @@ function nasa(number){
     return chaine
 }
 
+console.log(nasa(10))
 
 /*function nasa (number){
     let stringFinal = ""
