@@ -15,7 +15,7 @@ function lastIndexOf(element, value){
     return -1
 }
 
-function includes(arrelementay, value){
+function includes(element, value){
     for (let i = 0; i < element.length; i++) {
         if (element[i] == value) {
             return true
