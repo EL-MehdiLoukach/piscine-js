@@ -27,8 +27,11 @@ function lastIndexOf(array,value,number){
                 return i
             }
         }else{
-            if (array[i]==value && i == number){
-                return i 
+            if (i > number){
+                continue
+            }
+            if (array[i]==value){
+                return i
             }
         }
     }
@@ -43,6 +46,7 @@ function includes(array,value){
     }
     return false
 }
+
 /*function indexOf(array,valueInArray,number){
     let compteur = 0
 
