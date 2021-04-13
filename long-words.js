@@ -20,11 +20,7 @@ function noLongWords(array1){
         return element.length >= 7
     })
 
-    if (!t){
-        return true
-    }else {
-        return t
-    }
+return t
 }
 
-console.log(noLongWords(["125415151"]))
+console.log(noLongWords([ 'fill', 'carbon', 'chart', 'glare', 'express' ]))
