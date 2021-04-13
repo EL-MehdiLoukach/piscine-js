@@ -68,16 +68,25 @@ function tempForecasts(arrayObjects){
     const a = arrayObjects.map((element)=>{
         let temp = element.temperature
         let number  = Math.round((temp.slice(0,temp.indexOf("°") - 1) -32 )* 5/9)
-        return `${number}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${element.state[0].toUpperCase() + element.state.slice(1)}`
+        let name = element.region[0].toUpperCase()
+        let b = false
+        for (let i = 0; i < element.region.length ; i++){
+
+            if (b){
+                name += element.region[i].toUpperCase()
+                b = false
+                continue
+            }
+            
+            if(element.region[i] == " "){
+                b = true
+            }
+
+            if (i != 0){
+                name += element.region[i]
+            }
+        }
+        return `${number}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${name}`
     })
     return a 
 }
-
-tempForecasts([
-    {
-      city: 'Pasadena',
-      temperature: ' 101 °F',
-      state: 'california',
-      region: 'West',
-    }
-  ])
