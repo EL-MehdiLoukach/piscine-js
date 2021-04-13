@@ -68,22 +68,22 @@ function tempForecasts(arrayObjects){
     const a = arrayObjects.map((element)=>{
         let temp = element.temperature
         let number  = Math.floor((temp.slice(0,temp.indexOf("°") - 1) -32 )* 5/9)
-        let name = element.region[0].toUpperCase()
+        let name = element.state[0].toUpperCase()
         let b = false
-        for (let i = 0; i < element.region.length ; i++){
+        for (let i = 0; i < element.state.length ; i++){
 
             if (b){
-                name += element.region[i].toUpperCase()
+                name += element.state[i].toUpperCase()
                 b = false
                 continue
             }
             
-            if(element.region[i] == " "){
+            if(element.state[i] == " "){
                 b = true
             }
 
             if (i != 0){
-                name += element.region[i]
+                name += element.state[i]
             }
         }
         return `${number}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${name}`
