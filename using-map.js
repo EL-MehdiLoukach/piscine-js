@@ -34,12 +34,13 @@ function upperCasingStates(arrayCities){
 function fahrenheitToCelsius(arraytemperatures){
     const tableau =  arraytemperatures.map((temperature)=>{
         let a = parseInt(temperature.slice(0,temperature.indexOf("°")))
-        return Math.round((a - 32 ) * 5/9).toString() + "°C "
+        let result = Math.floor(((a - 32 ) * 5/9)).toString() +"°C"
+        return result
     })
     return tableau
 }
 
-fahrenheitToCelsius([""])
+fahrenheitToCelsius(['68°F', '59°F', '25°F']) 
 
 function trimTemp(arrayObjects){
 
