@@ -1,7 +1,8 @@
 const forEach = (array,funct) => {
-    let tab = []
-    for (let i=0;i <array.length;i++){
-        tab.push(funct(array[i],i,tab))
+    for (let i =0;i < array.length;i++){
+        array[i] = funct(array[i])
     }
-    return tab
+    return array
 }
+
+forEach([1,2,5],console.log())
