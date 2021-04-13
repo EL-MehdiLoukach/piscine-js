@@ -81,7 +81,7 @@ function tempForecasts(arrayObjects){
                 name += element.state[i]
             }
         }
-        return `${Math.floor(number)}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${name}`
+        return `${Math.floor(number)}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${name} `
     })
     return a 
 }
