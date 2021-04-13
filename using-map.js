@@ -67,7 +67,7 @@ function tempForecasts(arrayObjects){
 
     const a = arrayObjects.map((element)=>{
         let temp = element.temperature
-        let number  = Math.round((temp.slice(0,temp.indexOf("°") - 1) -32 )* 5/9)
+        let number  = Math.floor((temp.slice(0,temp.indexOf("°") - 1) -32 )* 5/9)
         let name = element.region[0].toUpperCase()
         let b = false
         for (let i = 0; i < element.region.length ; i++){
