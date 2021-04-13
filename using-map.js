@@ -36,8 +36,10 @@ function fahrenheitToCelsius(arraytemperatures){
         let a = parseInt(temperature.slice(0,temperature.indexOf("°")))
         return Math.round((a - 32 ) * 5/9).toString() + "°C "
     })
-    console.log(tableau)
+    return tableau
 }
+
+fahrenheitToCelsius([""])
 
 function trimTemp(arrayObjects){
 
