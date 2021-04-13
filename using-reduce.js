@@ -1,8 +1,10 @@
 
 
 function adder(array1,no){
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    return array1.reduce(reducer,no)
+    const tableau = array1.reduce((accumulator,currentValue)=>{
+        return accumulator + currentValue
+    },no)
+    return tableau
 }
 
 function sumOrMul(array1,no){
