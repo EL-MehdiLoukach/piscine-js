@@ -58,7 +58,7 @@ function trimTemp(arrayObjects){
 }
 
 function tempForecasts(arrayObjects){
-
+    console.log(arrayObjects)
     const a = arrayObjects.map((element)=>{
         let temp = element.temperature
         let tempString = parseInt(temp.slice(0,temp.indexOf("°") - 1))
@@ -81,7 +81,18 @@ function tempForecasts(arrayObjects){
                 name += element.state[i]
             }
         }
-        return `${Math.floor(number)}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${name} `
+
+        return `${Math.floor(number)}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${name}`
     })
+    console.log(a)
     return a 
 }
+
+tempForecasts([
+    {
+      city: 'Pasadena',
+      temperature: ' 101 °F',
+      state: 'california',
+      region: 'West',
+    }
+  ])
