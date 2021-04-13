@@ -18,7 +18,7 @@ function filterStartVowel(arrayString){
 function filter5Vowels(arrayString){
     const tableau = arrayString.filter((element)=>{
         let compteur = 0
-        for (ch of element.toLowerCase()){
+        for (let ch of element.toLowerCase()){
             if (ch == "a" || ch == "e"||ch == "i" ||ch == "o" ||ch == "u"){
                 compteur++
             }
@@ -67,7 +67,7 @@ function multiFilter(arrayString){
     const tableau = arrayString.filter(element=>{
         if (element.capital.length>=8){
             return element
-        }else if (element.name[0] != "a" && element.name[0] != "e" && element.name[0] != "i" && element.name[0] != "o" && element.name[0] != "u"){
+        }else if (element.name[0].toLowerCase() != "a" && element.name[0].toLowerCase() != "e" && element.name[0].toLowerCase() != "i" && element.name[0].toLowerCase() != "o" && element.name[0].toLowerCase() != "u"){
             return element
         }else if (element.tag.includes("a") || element.tag.includes("e") ||element.tag.includes("i") ||element.tag.includes("o") ||element.tag.includes("u")){
             return element
