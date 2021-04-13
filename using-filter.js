@@ -71,15 +71,18 @@ function multiFilter(arrayString){
         let capital = false
         let tag = false
         let region = false
-        let b= element.tag.toLowerCase()
+        let b = element.tag.toLowerCase()
 
         if (element.capital.length>=8){
             capital = true
-        }else if (element.name[0].toLowerCase() != "a" && element.name[0].toLowerCase() != "e" && element.name[0].toLowerCase() != "i" && element.name[0].toLowerCase() != "o" && element.name[0].toLowerCase() != "u"){
+        }
+        if (element.name[0].toLowerCase() != "a" && element.name[0].toLowerCase() != "e" && element.name[0].toLowerCase() != "i" && element.name[0].toLowerCase() != "o" && element.name[0].toLowerCase() != "u"){
             name = true
-        }else if (b.includes("a") || b.includes("e") || b.includes("i") || b.includes("o") || b.includes("u")){
+        }
+        if (b.includes("a") || b.includes("e") || b.includes("i") || b.includes("o") || b.includes("u")){
             tag = true
-        }else if (element.region != "South"){
+        }
+        if (element.region != "South"){
             region = true
         }
 
@@ -90,4 +93,39 @@ function multiFilter(arrayString){
     console.log(tableau)
     return tableau 
 }
+
+multiFilter(
+    [
+          {
+            capital: 'Sacramento',
+            name: 'California',
+            region: 'West',
+            tag: 'CA'
+          },
+          {
+            capital: 'Honolulu',
+            name: 'Hawaii',
+            region: 'West',
+            tag: 'HI'
+          },
+          {
+            capital: 'Jefferson City',
+            name: 'Missouri',
+            region: 'Midwest',
+            tag: 'MO'
+          },
+          {
+            capital: 'Harrisburg',
+            name: 'Pennsylvania',
+            region: 'Northeast',
+            tag: 'PA'
+          },
+          {
+            capital: 'Providence',
+            name: 'Rhode Island',
+            region: 'Northeast',
+            tag: 'RI'
+          }
+        ]
+)
 
