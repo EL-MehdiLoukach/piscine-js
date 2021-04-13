@@ -2,6 +2,7 @@ function citiesOnly(arrayObject){
     const array = arrayObject.map((element)=>{
         return element.city
     })
+    return array
 }
 
 
@@ -27,7 +28,7 @@ function upperCasingStates(arrayCities){
         }
         return name
     })
-    console.log(tableau)
+    return tableau
 }
 
 function fahrenheitToCelsius(arraytemperatures){
@@ -51,6 +52,7 @@ function trimTemp(arrayObjects){
         }
         return b
     })
+    return a 
 }
 
 function tempForecasts(arrayObjects){
@@ -60,7 +62,7 @@ function tempForecasts(arrayObjects){
         let number  = Math.round((temp.slice(0,temp.indexOf("°") - 1) -32 )* 5/9)
         return `${number}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${element.state[0].toUpperCase() + element.state.slice(1)}`
     })
-    console.log(a)
+    return a 
 }
 
 tempForecasts([
