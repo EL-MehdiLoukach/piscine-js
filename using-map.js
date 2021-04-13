@@ -83,15 +83,5 @@ function tempForecasts(arrayObjects){
         }
         return `${number}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${name}`
     })
-    console.log(a)
     return a 
 }
-
-tempForecasts([
-    {
-      city: 'Pasadena',
-      temperature: ' -1 °F',
-      state: 'california',
-      region: 'West',
-    }
-  ])
