@@ -22,6 +22,8 @@ function noLongWords(array1){
     if (!t){
         return true
     }else {
-        return false
+        return t
     }
 }
+
+console.log(noLongWords(["125415151"]))
