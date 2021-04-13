@@ -56,7 +56,7 @@ function trimTemp(arrayObjects){
 function tempForecasts(arrayObjects){
 
     const a = arrayObjects.map((element)=>{
-        temp = element.temperature
+        let temp = element.temperature
         let number  = Math.round((temp.slice(0,temp.indexOf("°") - 1) -32 )* 5/9)
         return `${number}°Celsius in ${element.city[0].toUpperCase() + element.city.slice(1)}, ${element.state[0].toUpperCase() + element.state.slice(1)}`
     })
