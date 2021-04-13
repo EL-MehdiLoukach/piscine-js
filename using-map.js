@@ -40,8 +40,6 @@ function fahrenheitToCelsius(arraytemperatures){
     return tableau
 }
 
-fahrenheitToCelsius(['68°F', '59°F', '25°F']) 
-
 function trimTemp(arrayObjects){
 
     const a = arrayObjects.map((element)=>{
@@ -53,10 +51,17 @@ function trimTemp(arrayObjects){
                 b += element.temperature[i]
             }
         }
-        return b
+        element.temperature = b
+        return element
     })
+    console.log(a)
     return a 
 }
+
+trimTemp([
+    { city: 'Los Angeles', temperature: '  101 °F   '},
+    { city: 'San Francisco', temperature: ' 84 ° F   '},
+  ])
 
 function tempForecasts(arrayObjects){
 
