@@ -20,7 +20,7 @@ function noLongWords(array1){
         return element.length >= 7
     })
 
-return t
+    return t
 }
 
 console.log(noLongWords([ 'fill', 'carbon', 'chart', 'glare', 'express' ]))
