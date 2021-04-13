@@ -1,15 +1,15 @@
-function more(number){
-    return number + 1
+function more(argument){
+    return argument + 1
 }
 
-function less(number){
-    return number - 1
+function less(argument){
+    return argument - 1
 }
 
-function add(number,number1){
-    return number + number1
+function add(argument, argument1){
+    return argument + argument1
 }
 
-function sub(number,number1){
-    return number - number1
+function sub(argument,argument1){
+    return argument - argument1
 }
