@@ -67,13 +67,14 @@ function filter1DistinctVowel(arrayString){
 
 function multiFilter(arrayString){
     const tableau = arrayString.filter((element) =>{
+        let b= element.tag.toLowerCase()
         if (element.capital.length>=8){
             return element
         }else if (element.name[0].toLowerCase() != "a" && element.name[0].toLowerCase() != "e" && element.name[0].toLowerCase() != "i" && element.name[0].toLowerCase() != "o" && element.name[0].toLowerCase() != "u"){
             return element
-        }else if (element.tag.includes("a") || element.tag.includes("e") ||element.tag.includes("i") ||element.tag.includes("o") ||element.tag.includes("u")){
+        }else if (b.includes("a") || b.includes("e") || b.includes("i") || b.includes("o") || b.includes("u")){
             return element
-        }else if (element.region !=  "South"){
+        }else if (element.region != "South"){
             return element
         }
     })
