@@ -61,18 +61,9 @@ function filter1DistinctVowel(arrayString){
             return element
         }
     })
-    console.log(tableau)
     return tableau
 }
 
-filter1DistinctVowel([
-    'Alabama', 'Alaska',
-    'Arizona', 'Arkansas',
-    'Idaho',   'Illinois',
-    'Indiana', 'Iowa',
-    'Ohio',    'Oklahoma',
-    'Oregon',  'Utah'
-  ])
 
 function multiFilter(arrayString){
     const tableau = arrayString.filter((element) =>{
