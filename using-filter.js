@@ -33,7 +33,7 @@ function filter5Vowels(arrayString){
 
 function filter1DistinctVowel(arrayString){
 
-    const tableau = arrayString.filter(element=>{
+    const tableau = arrayString.filter((element) =>{
         let compteurVoyelle = 0
 
         if (element.includes("a")){
@@ -64,7 +64,7 @@ function filter1DistinctVowel(arrayString){
 }
 
 function multiFilter(arrayString){
-    const tableau = arrayString.filter(element=>{
+    const tableau = arrayString.filter((element) =>{
         if (element.capital.length>=8){
             return element
         }else if (element.name[0].toLowerCase() != "a" && element.name[0].toLowerCase() != "e" && element.name[0].toLowerCase() != "i" && element.name[0].toLowerCase() != "o" && element.name[0].toLowerCase() != "u"){
