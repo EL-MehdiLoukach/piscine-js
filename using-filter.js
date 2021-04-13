@@ -35,24 +35,25 @@ function filter1DistinctVowel(arrayString){
 
     const tableau = arrayString.filter((element) =>{
         let compteurVoyelle = 0
+        let b = element.toLowerCase()
 
-        if (element.includes("a")){
+        if (b.includes("a")){
             compteurVoyelle++
         }
 
-        if (element.includes("e")){
+        if (b.includes("e")){
             compteurVoyelle++
         }
 
-        if (element.includes("i")){
+        if (b.includes("i")){
             compteurVoyelle++
         }
 
-        if (element.includes("o")){
+        if (b.includes("o")){
             compteurVoyelle++
         }
 
-        if (element.includes("u")){
+        if (b.includes("u")){
             compteurVoyelle++
         }
 
@@ -60,8 +61,18 @@ function filter1DistinctVowel(arrayString){
             return element
         }
     })
+    console.log(tableau)
     return tableau
 }
+
+filter1DistinctVowel([
+    'Alabama', 'Alaska',
+    'Arizona', 'Arkansas',
+    'Idaho',   'Illinois',
+    'Indiana', 'Iowa',
+    'Ohio',    'Oklahoma',
+    'Oregon',  'Utah'
+  ])
 
 function multiFilter(arrayString){
     const tableau = arrayString.filter((element) =>{
