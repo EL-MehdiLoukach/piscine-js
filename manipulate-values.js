@@ -16,8 +16,15 @@ function filterValues(obj,funct){
 }
 
 function mapValues(obj,funct){
-    console.log(obj)
-    console.log(`wesh ${funct}`)
+    let obj1 = {}
+    let entries = []
+    let keyObject = Object.keys(obj)
+
+    keyObject.forEach((key,index)=>{
+        entries.push([key,funct(obj[key],index)])
+    })
+    obj1 = Object.fromEntries(entries)
+    return obj1
 }
 
 function reduceValues(array1,no = 0){
