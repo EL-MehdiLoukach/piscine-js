@@ -8,6 +8,7 @@ function filterValues(obj,funct){
 
         if(bool){
             const entries = new Map([[element,obj[element]]]);
+            console.log(obj1)
             obj1 = Object.fromEntries(entries)
         }
     })
