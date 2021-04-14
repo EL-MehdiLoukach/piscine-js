@@ -25,6 +25,31 @@ function pick(obj,keys){
 
 function omit(obj,keys){
 
+    let obj1 = {}
+    let objectKeys = Object.keys(obj)
+
+    if (typeof keys == "string"){   
+        objectKeys.forEach((element)=>{
+            if (element != keys){
+                obj1[keys] = obj[keys]
+            }
+        })
+    }else{
+        objectKeys.forEach((element)=>{
+            let a = false
+            keys.forEach((elements)=>{
+                if (element == elements){
+                    a = true
+                }
+            })
+
+            if (!a){
+                obj1[element] = obj[element]
+                a = false
+            }
+        })
+    }
+
     return obj1
 }
 
