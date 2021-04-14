@@ -6,7 +6,7 @@ function filterValues(obj,funct){
     valueObject.forEach((element,index)=>{
         let bool = funct(obj[element],index)
         if(bool){
-            obj1 = Object.fromEntries(element,obj[element])
+            obj1 = Object.fromEntries(new Map([element,obj[element]]))
         }
     })
     return obj1
