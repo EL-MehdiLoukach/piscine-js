@@ -6,10 +6,10 @@ function filterValues(obj,funct){
     valueObject.forEach((element,index)=>{
         let bool = funct(obj[element],index)
         if(bool){
-            Object.fromEntries(element,obj[element])
+            obj1 = Object.fromEntries(element,obj[element])
         }
     })
-    return array2
+    return obj1
 }
 
 function mapValues(array,funct){
