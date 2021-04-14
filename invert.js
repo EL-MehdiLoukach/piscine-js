@@ -1,9 +1,10 @@
 
 function invert(obj){
-   let a = {}
-   
-   for(let key in obj){
-       a[obj[key]] = key
-   }
-   return a 
+   let obj1 = {}
+    let keys = Object.keys(obj)
+
+    keys.forEach((element)=>{
+        obj1[obj[element]] = element
+    })
+    return obj1
 }
