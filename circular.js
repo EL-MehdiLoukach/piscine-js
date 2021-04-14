@@ -2,4 +2,4 @@
 const circular = {
 }
 
-emptyObject.circular = emptyObject
+circular.circular = circular
