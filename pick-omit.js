@@ -22,3 +22,7 @@ function pick(obj,keys){
 
     return obj1
 }
+
+function omit(obj,keys){
+
+}
