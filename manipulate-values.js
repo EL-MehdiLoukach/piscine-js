@@ -12,11 +12,11 @@ function filterValues(obj,funct){
         }
     })
     obj1 = Object.fromEntries(entries)
-    console.log(obj1)
     return obj1
 }
 
-function mapValues(array,funct){
+function mapValues(obj,funct){
+    console.log(obj)
     
 }
 
