@@ -27,9 +27,11 @@ function mapValues(obj,funct){
     return obj1
 }
 
-function reduceValues(array1,no){
-    console.log(`wesh ${array1}`)
-    console.log(`dshd ${no}`)
-
-    return array1
+function reduceValues(obj,funct){
+    let keyObject = Object.keys(obj)
+    let number = 0
+    keyObject.forEach((element,index)=>{
+        number = funct(obj[element],index,keyObject)
+    })
+    return number
 }
