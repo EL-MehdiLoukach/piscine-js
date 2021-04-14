@@ -1,17 +1,17 @@
 
 function filterValues(obj,funct){
     let obj1 = {}
+    let entries = []
     let valueObject = Object.keys(obj)
 
     valueObject.forEach((element,index)=>{
         let bool = funct(obj[element],index)
 
         if(bool){
-            const entries = new Map([[element,obj[element]]]);
-            console.log(obj1)
-            obj1 = Object.fromEntries(entries)
+            entries.push([element,obj[element]])         
         }
     })
+    obj1 = Object.fromEntries(entries)
     console.log(obj1)
     return obj1
 }
