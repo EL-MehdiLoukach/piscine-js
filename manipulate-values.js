@@ -6,7 +6,10 @@ function filterValues(obj,funct){
     valueObject.forEach((element,index)=>{
         let bool = funct(obj[element],index)
         if(bool){
-            obj1 = Object.fromEntries(new Map([element,obj[element]]))
+            const entries = new Map([
+                [element,obj[element]],
+              ]);
+            obj1 = Object.fromEntries(entries)
         }
     })
     console.log(obj1)
