@@ -31,4 +31,5 @@ function reduceValues(array1,no){
     console.log(`wesh ${array1}`)
     console.log(`dshd ${no}`)
 
+    return array1
 }
