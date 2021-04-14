@@ -20,6 +20,8 @@ function flatMap(array,funct){
             }
         }
     }
-
+    for (let i = 0; a.length;i++){
+        a.concat(a[i])
+    }
     return a
 }
