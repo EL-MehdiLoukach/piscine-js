@@ -22,5 +22,3 @@ function noLongWords(array1){
 
     return t
 }
-
-console.log(noLongWords([ 'fill', 'carbon', 'chart', 'glare', 'express' ]))

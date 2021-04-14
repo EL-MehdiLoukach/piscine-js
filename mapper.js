@@ -9,6 +9,7 @@ function map(array,funct){
 
 function flatMap(array,funct){
     let a = []
+
     recursive(array)
     
     function recursive(element){
@@ -16,12 +17,14 @@ function flatMap(array,funct){
             if (typeof element[i]== "object"){
                 recursive(element[i])
             }else {
-                a.push(funct(element[i]))
+                a.push(element[i])
             }
         }
     }
-    for (let i = 0; a.length;i++){
-        a.concat(a[i])
-    }
     return a
 }
+
+const tab = [1,2,3,[1,2,5,87]]
+const f = (n) => [n,n]
+console.log(tab.flatMap(f))
+console.log(flatMap(tab,f))
