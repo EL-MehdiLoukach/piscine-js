@@ -33,5 +33,6 @@ function reduceValues(obj,funct){
     keyObject.forEach((element,index)=>{
         number = funct(obj[element],index,keyObject)
     })
+    console.log(number)
     return number
 }
