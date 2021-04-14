@@ -27,7 +27,7 @@ function mapValues(obj,funct){
     return obj1
 }
 
-function reduceValues(obj,funct,kc){
+function reduceValues(obj,funct,kc = 0){
     console.log(`wesh ${kc}`)
     let keyObject = Object.keys(obj)
     let number = 0
