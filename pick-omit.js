@@ -24,5 +24,8 @@ function pick(obj,keys){
 }
 
 function omit(obj,keys){
+    console.log(obj)
+    console.log("wesh")
+    console.log(keys)
 
 }
