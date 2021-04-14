@@ -1,3 +1,4 @@
 function pick(obj,keys){
-    console.log(keys,obj)
+    console.log(keys)
+    console.log("wesh",obj)
 }
