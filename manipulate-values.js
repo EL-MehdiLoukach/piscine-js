@@ -1,12 +1,12 @@
 
 function filterValues(obj,funct){
-    let array2 = []
+    let obj1 = {}
     let valueObject = Object.keys(obj)
 
     valueObject.forEach((element,index)=>{
         let bool = funct(obj[element],index)
         if(bool){
-            array2.push(obj[element])
+            Object.fromEntries([element,obj[element]])
         }
     })
     return array2
