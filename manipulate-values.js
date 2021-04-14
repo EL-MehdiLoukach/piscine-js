@@ -27,10 +27,10 @@ function mapValues(obj,funct){
     return obj1
 }
 
-function reduceValues(obj,funct){
+function reduceValues(obj,funct,kc){
+    console.log(`wesh ${kc}`)
     let keyObject = Object.keys(obj)
     let number = 0
-    let initial = 0
     keyObject.forEach((element,index)=>{
         number = funct(number, obj[element],index,keyObject,initial)
     })
