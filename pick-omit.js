@@ -31,7 +31,7 @@ function omit(obj,keys){
     if (typeof keys == "string"){   
         objectKeys.forEach((element)=>{
             if (element != keys){
-                obj1[keys] = obj[keys]
+                obj1[element] = obj[element]
             }
         })
     }else{
@@ -53,7 +53,7 @@ function omit(obj,keys){
     return obj1
 }
 
-let c = ["name","age"]
+let c = "name"
 
 let fc = {
     name:"Pierre",
