@@ -4,7 +4,7 @@ function filterValues(obj,funct){
     let valueObject = Object.keys(obj)
 
     valueObject.forEach((element,index)=>{
-        array2 = funct(element,index)
+        array2 = funct(obj[element],index)
         console.log(`wesh ${array2}`)
     })
     return array2
