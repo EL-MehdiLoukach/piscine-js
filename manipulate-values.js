@@ -17,7 +17,7 @@ function filterValues(obj,funct){
 
 function mapValues(obj,funct){
     console.log(obj)
-    
+    console.log(`wesh ${funct}`)
 }
 
 function reduceValues(array1,no = 0){
