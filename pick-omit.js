@@ -34,9 +34,9 @@ function omit(obj,keys){
             }
         })
     }else{
-        keys.forEach((element)=>{
-            keyObject.forEach((elements)=>{
-                if(element != elements){
+        keyObject.forEach((element)=>{
+            keys.forEach((elements)=>{
+                if (element != elements){
                     obj1[element] = obj[element]
                 }
             })
