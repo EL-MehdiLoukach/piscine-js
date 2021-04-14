@@ -27,6 +27,8 @@ function mapValues(obj,funct){
     return obj1
 }
 
-function reduceValues(array1,no = 0){
+function reduceValues(array1,no){
+    console.log(`wesh ${array1}`)
+    console.log(`dshd ${no}`)
 
 }
