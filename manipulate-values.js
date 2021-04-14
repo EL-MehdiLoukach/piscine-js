@@ -9,6 +9,7 @@ function filterValues(obj,funct){
             obj1 = Object.fromEntries(new Map([element,obj[element]]))
         }
     })
+    console.log(obj1)
     return obj1
 }
 
