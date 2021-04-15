@@ -1,5 +1,5 @@
 
-function filterEntries(obj,funct){
+function filterEntries(obj,funct,k){
     let obj1 = {}
     let entries = []
     let valueObject = Object.keys(obj)
@@ -13,7 +13,7 @@ function filterEntries(obj,funct){
         }
     })
     obj1 = Object.fromEntries(entries)
-    console.logt(obj1)
+    console.logt(k)
     return obj1
 }
 
