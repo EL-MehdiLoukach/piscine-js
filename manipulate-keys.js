@@ -31,17 +31,8 @@ function reduceKeys(obj,funct,kc){
     console.log(`wesh ${kc}`)
     let keyObject = Object.keys(obj)
     let number = ""
-    let fd = ""
     keyObject.forEach((element,index)=>{
-        if (index == 0){
-            console.log("wesh")
-            fd = funct(fd, element,index,keyObject)
-            console.log(`abcd${fd}`)
-        }else{
-            number = funct(number, element,index,keyObject,kc)
-        }
-        
-    })
-    
-    return fd + number
+        number = funct(number, element,index,keyObject,kc)
+    })  
+    return number.replace(kc,"")
 }
