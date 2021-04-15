@@ -54,7 +54,7 @@ function reduceEntries(obj,funct,kc){
             return  keyObject[0] + bd
         }
 
-        return kc + keyObject[0] + bd
+        return bd
     }else{
         number = keyObject.reduce(funct,kc)
     }
