@@ -30,9 +30,7 @@ function mapKeys(obj,funct){
 function reduceKeys(obj,funct, kc = ""){
     
     let keyObject = Object.keys(obj)
-    let number = ""
-    number = funct(number, element,index,keyObject,kc)
-    keyObject.reduce(funct,kc)
+    let number = keyObject.reduce(funct,kc)
     
-    
+    return number
 }
