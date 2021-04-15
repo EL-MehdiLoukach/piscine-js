@@ -13,13 +13,7 @@ function filterEntries(obj,funct){
         }
     })
     obj1 = Object.fromEntries(entries)
+    console.logt(obj1)
     return obj1
 }
 
-function mapEntries(obj,funct){
-
-}
-
-function reduceEntries(obj,funct,kc = 0){
-
-}
