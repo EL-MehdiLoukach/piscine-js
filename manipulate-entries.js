@@ -48,6 +48,7 @@ function reduceEntries(obj,funct,kc){
                 bd += number[i]
             }
         }
+        console.log(bd)
 
         if (kc == null){
             return  keyObject[0] + bd
