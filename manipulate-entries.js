@@ -44,7 +44,7 @@ function reduceEntries(obj,funct,kc){
         number = keyObject.reduce(funct,kc)
         let bd  = ""
         for (let i = 0;i < number.length;i++){
-            if (i > number.indexOf(keyObject[0]) + keyObject[0].length ){
+            if (i > number.indexOf(keyObject[0]) + keyObject[0].length -2){
                 bd += number[i]
             }
         }
