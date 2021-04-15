@@ -40,7 +40,7 @@ function reduceKeys(obj,funct, kc = ""){
                 bd += number[i]
             }
         }
-        return keyObject[0] + bd
+        return kc + keyObject[0] + bd
     }   
     
     return number
