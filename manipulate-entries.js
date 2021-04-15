@@ -76,10 +76,10 @@ function lowCarbs(obj){
     let obj1
     let array = []
     let arrayKey = Object.keys(obj)
-
+    let number = 0
     arrayKey.forEach((element)=>{
 
-        if (nutritionDB[element].carbs < 30){
+        if (number + nutritionDB[element].carbs < 50){
             array.push([element,obj[element]])
         }
     })
