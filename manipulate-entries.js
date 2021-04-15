@@ -94,13 +94,14 @@ function cartTotal(obj){
     let array = []
     arrayKeys.forEach((element)=>{
         let obj2  = {}
+        let fd = element
         obj2.calories = obj[element] * nutritionDB[element].calories/100
         obj2.carbs = obj[element] * nutritionDB[element].carbs/100
         obj2.fat = obj[element] * nutritionDB[element].fat/100
         obj2.fiber = obj[element] * nutritionDB[element].fiber/100
         obj2.protein = obj[element] * nutritionDB[element].protein/100
         obj2.sugar = obj[element] * nutritionDB[element].sugar/100
-        array.push({element: obj2})
+        array.push({fd: obj2})
         
         obj1 += obj2
         console.log(obj1)
