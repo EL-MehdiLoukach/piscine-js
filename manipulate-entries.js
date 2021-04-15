@@ -48,7 +48,6 @@ function reduceEntries(obj,funct,kc){
                 bd += number[i]
             }
         }
-        console.log(bd)
 
         if (kc == null){
             return  keyObject[0] + bd
@@ -62,12 +61,29 @@ function reduceEntries(obj,funct,kc){
     return number
 }
 
-function totalCalories(obj, funct){
-    console.log(obj,funct)
+function totalCalories(obj){
+    let result
+    let arrayKey = Object.keys(obj)
+
+    arrayKey.forEach((element)=>{
+        result += obj[element]
+    })
+
+    return result
 }
 
-function lowCarbs(obj, funct){
-    console.log(obj,funct)
+function lowCarbs(obj){
+    let obj1
+    let array = []
+    let arrayKey = Object.keys(obj)
+
+    arrayKey.forEach((element)=>{
+        if (obj.element.carbs<50){
+            array.push([element,obj[element]])
+        }
+    })
+    obj1 = Object.fromEntries(array)
+    return result
 }
 
 function cartTotal(obj, funct){
