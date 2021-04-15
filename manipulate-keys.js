@@ -35,7 +35,13 @@ function reduceKeys(obj,funct,kc){
         number = funct(number, element,index,keyObject,kc)
     })
     console.log("wesh la street", keyObject[0])
-    console.log(`wesh ${number.replace(keyObject[0],"")}`)
-
+    let bd = ""
+    let cb = number.indexOf(keyObject[0])
+    for (let i = 0;i < number.length;i++){
+        if (i > cb + keyObject[0] - 2){
+            bd += number[i]
+        }
+    }
+    console.log(keyObject[0] + bd)
     return number.replace(kc,"")
 }
