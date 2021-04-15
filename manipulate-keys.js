@@ -34,7 +34,7 @@ function reduceKeys(obj,funct,kc){
     keyObject.forEach((element,index)=>{
         number = funct(number, element,index,keyObject,kc)
     })
-    console.log("wesh la street", obj[0])
+    console.log("wesh la street", keyObject[0])
     console.log(`wesh ${number.replace(kc,"")}`)
 
     return number.replace(kc,"")
