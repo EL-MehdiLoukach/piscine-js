@@ -39,7 +39,7 @@ function reduceKeys(obj,funct,kc){
     let cb = number.indexOf(keyObject[0])
 
     for (let i = 0;i < number.length;i++){
-        if (i > cb + keyObject[0].length - 2){
+        if (i > cb + keyObject[0].length - 3){
             bd += number[i]
         }
     }
