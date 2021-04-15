@@ -27,7 +27,7 @@ function mapKeys(obj,funct){
     return obj1
 }
 
-function reduceKeys(obj,funct,kc){
+function reduceKeys(obj,funct,kc = ""){
     
     let keyObject = Object.keys(obj)
     let number = ""
@@ -44,5 +44,5 @@ function reduceKeys(obj,funct,kc){
         }
     }
     
-    return keyObject[0] + bd
+    return kc + keyObject[0] + bd
 }
