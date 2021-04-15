@@ -40,6 +40,6 @@ function reduceKeys(obj,funct,kc){
         }
         
     })
-    console.log(`abcd${fd + number}`)
+    console.log(`abcd${fd}`)
     return fd + number
 }
