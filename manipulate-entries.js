@@ -62,3 +62,15 @@ function reduceEntries(obj,funct,kc){
     return number
 }
 
+function totalCalories(obj, funct){
+    console.log(obj,funct)
+}
+
+function lowCarbs(obj, funct){
+    console.log(obj,funct)
+}
+
+function cartTotal(obj, funct){
+    console.log(obj,funct)
+}
+
