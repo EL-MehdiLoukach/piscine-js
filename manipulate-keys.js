@@ -34,12 +34,14 @@ function reduceKeys(obj,funct,kc){
     let fd = ""
     keyObject.forEach((element,index)=>{
         if (index == 0){
+            console.log("wesh")
             fd = funct(number, element,index,keyObject)
+            console.log(`abcd${fd}`)
         }else{
             number = funct(number, element,index,keyObject,kc)
         }
         
     })
-    console.log(`abcd${fd}`)
+    
     return fd + number
 }
