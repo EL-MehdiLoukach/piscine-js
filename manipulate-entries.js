@@ -103,6 +103,7 @@ function cartTotal(obj){
         obj2.sugar = obj[element] * nutritionDB[element].sugar/100
         obj1[element] = obj2
     })
+    console.log(obj1)
 
     return obj1
 }
