@@ -69,7 +69,7 @@ function totalCalories(obj){
         result += obj[element] * nutritionDB[element].calories/100
     })
 
-    return Math.round(result)
+    return Math.round(result * 100) / 100
 }
 
 function lowCarbs(obj){
