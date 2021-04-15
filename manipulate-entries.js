@@ -5,9 +5,10 @@ function filterEntries(obj,funct){
     let valueObject = Object.keys(obj)
     
     valueObject.forEach((element,index)=>{
+        
+        let bool = funct([element,obj[element]],index,valueObject)
         console.log (obj[element])
-        let bool = funct(obj[element],index,valueObject)
-        console.log("helloooo", bool)
+
         if(bool){
             entries.push([element,obj[element]])         
         }
