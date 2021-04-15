@@ -84,8 +84,7 @@ function lowCarbs(obj){
         }
     })
     obj1 = Object.fromEntries(array)
-    console.log(obj)
-    console.log("weshhhh",obj1)
+    
     return obj1
 }
 
