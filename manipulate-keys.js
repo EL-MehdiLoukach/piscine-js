@@ -44,7 +44,7 @@ function reduceKeys(obj,funct, kc = ""){
         }
     }
 
-    if (kc == "null"){
+    if (kc == null){
         return keyObject[0] + bd
     }else{
         return kc + keyObject[0] + bd
