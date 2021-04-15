@@ -104,7 +104,7 @@ function cartTotal(obj){
         array.push({fd: obj2})
         
         obj1 += obj2
-        console.log(obj1)
+        console.log(array)
     })
     
 
