@@ -88,7 +88,22 @@ function lowCarbs(obj){
     return obj1
 }
 
-function cartTotal(obj, funct){
-    console.log(obj,funct)
+function cartTotal(obj){
+    let obj1 = {}
+    let arrayKeys = Object.keys(obj)
+    let array = []
+    arrayKeys.forEach((element)=>{
+        let obj2  = {}
+        obj2.calories = obj[element] * nutritionDB[element].calories/100
+        obj2.carbs = obj[element] * nutritionDB[element].carbs/100
+        obj2.fat = obj[element] * nutritionDB[element].fat/100
+        obj2.fiber = obj[element] * nutritionDB[element].fiber/100
+        obj2.protein = obj[element] * nutritionDB[element].protein/100
+        obj2.sugar = obj[element] * nutritionDB[element].sugar/100
+        array.push(obj2)
+    })
+    obj1 = Object.fromEntries(array)
+    
+    return obj1
 }
 
