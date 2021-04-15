@@ -6,6 +6,7 @@ function filterEntries(obj,funct){
 
     valueObject.forEach((element,index)=>{
         let bool = funct(obj[element],index)
+        console.log("helloooo", bool)
 
         if(bool){
             entries.push([element,obj[element]])         
