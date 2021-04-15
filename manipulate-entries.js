@@ -95,12 +95,12 @@ function cartTotal(obj){
     arrayKeys.forEach((element)=>{
         let obj2  = {}
         let fd = element
-        obj2.calories = Math.round((obj[element] * nutritionDB[element].calories/100) * 100)/100
-        obj2.carbs = Math.round((obj[element] * nutritionDB[element].carbs/100) * 100)/100
-        obj2.fat = Math.round((obj[element] * nutritionDB[element].fat/100) * 100)/100
-        obj2.fiber = Math.round((obj[element] * nutritionDB[element].fiber/100) * 100)/100
-        obj2.protein = Math.round((obj[element] * nutritionDB[element].protein/100) * 100)/100
-        obj2.sugar = Math.round((obj[element] * nutritionDB[element].sugar/100) * 100)/100
+        obj2.calories = Math.round((obj[element] * nutritionDB[element].calories/100) * 1000)/1000
+        obj2.carbs = Math.round((obj[element] * nutritionDB[element].carbs/100) * 1000)/1000
+        obj2.fat = Math.round((obj[element] * nutritionDB[element].fat/100) * 1000)/1000
+        obj2.fiber = Math.round((obj[element] * nutritionDB[element].fiber/100) * 1000)/1000
+        obj2.protein = Math.round((obj[element] * nutritionDB[element].protein/100) * 1000)/1000
+        obj2.sugar = Math.round((obj[element] * nutritionDB[element].sugar/100) * 1000)/1000
         obj1[element] = obj2
     })
     console.log(obj1)
