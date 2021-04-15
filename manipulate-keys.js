@@ -34,7 +34,7 @@ function reduceKeys(obj,funct,kc){
     keyObject.forEach((element,index)=>{
         number = funct(number, element,index,keyObject,kc)
     })
-    console.log("wesh la street", keyObject[0])
+    console.log("wesh la street", kc)
     let bd = ""
     let cb = number.indexOf(keyObject[0])
 
