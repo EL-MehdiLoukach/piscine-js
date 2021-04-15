@@ -101,12 +101,8 @@ function cartTotal(obj){
         obj2.fiber = obj[element] * nutritionDB[element].fiber/100
         obj2.protein = obj[element] * nutritionDB[element].protein/100
         obj2.sugar = obj[element] * nutritionDB[element].sugar/100
-        array.push({fd: obj2})
-        
-        obj1 += obj2
-        console.log(array)
+        obj1[element] = obj2
     })
-    
 
     return obj1
 }
