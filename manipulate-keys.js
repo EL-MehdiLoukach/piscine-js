@@ -28,11 +28,13 @@ function mapKeys(obj,funct){
 }
 
 function reduceKeys(obj,funct,kc){
-    console.log(`wesh ${kc}`)
+    
     let keyObject = Object.keys(obj)
     let number = ""
     keyObject.forEach((element,index)=>{
         number = funct(number, element,index,keyObject,kc)
     })  
+    console.log(`wesh ${number.replace(kc,"")}`)
+    
     return number.replace(kc,"")
 }
