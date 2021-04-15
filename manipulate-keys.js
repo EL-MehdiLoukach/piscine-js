@@ -30,7 +30,7 @@ function mapKeys(obj,funct){
 function reduceKeys(obj,funct, kc){
 
     if (kc == undefined){
-        kc = null
+        kc = ""
     }
     
     let keyObject = Object.keys(obj)
