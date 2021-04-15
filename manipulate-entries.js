@@ -30,3 +30,34 @@ function mapEntries(obj,funct){
     return obj1
 }
 
+function reduceEntries(obj,funct,kc){
+
+    if (kc == undefined){
+        kc = ""
+    }
+    
+    let keyObject = Object.entries(obj)
+    let number
+
+    if (typeof kc == "string" || kc == null){
+
+        number = keyObject.reduce(funct,kc)
+        let bd  = ""
+        for (let i = 0;i < number.length;i++){
+            if (i > number.indexOf(keyObject[0]) + keyObject[0].length - 1 ){
+                bd += number[i]
+            }
+        }
+
+        if (kc == null){
+            return  keyObject[0] + bd
+        }
+
+        return kc + keyObject[0] + bd
+    }else{
+        number = keyObject.reduce(funct,kc)
+    }
+    
+    return number
+}
+
