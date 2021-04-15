@@ -31,22 +31,8 @@ function reduceKeys(obj,funct, kc = ""){
     
     let keyObject = Object.keys(obj)
     let number = ""
-    keyObject.forEach((element,index)=>{
-        number = funct(number, element,index,keyObject,kc)
-    })
-    console.log("wesh la street", kc)
-    let bd = ""
-    let cb = number.indexOf(keyObject[0])
-
-    for (let i = 0;i < number.length;i++){
-        if (i > cb + keyObject[0].length - 1){
-            bd += number[i]
-        }
-    }
-
-    if (kc == null){
-        return keyObject[0] + bd
-    }else{
-        return kc + keyObject[0] + bd
-    }
+    number = funct(number, element,index,keyObject,kc)
+    keyObject.reduce(funct,kc)
+    
+    
 }
