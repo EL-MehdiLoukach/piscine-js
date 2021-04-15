@@ -62,11 +62,11 @@ function reduceEntries(obj,funct,kc){
 }
 
 function totalCalories(obj){
-    let result
+    let result = 0
     let arrayKey = Object.keys(obj)
 
     arrayKey.forEach((element)=>{
-        result += obj[element]
+        result += obj[element] * nutritionDB[element].calories/100
     })
 
     return result
@@ -77,7 +77,7 @@ function lowCarbs(obj){
     let array = []
     let arrayKey = Object.keys(obj)
     arrayKey.forEach((element)=>{
-        
+
         let resultCarbs = obj[element] * nutritionDB[element].carbs/100
         if (resultCarbs < 50){
             array.push([element,obj[element]])
