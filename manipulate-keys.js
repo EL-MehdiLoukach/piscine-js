@@ -37,11 +37,12 @@ function reduceKeys(obj,funct,kc){
     console.log("wesh la street", keyObject[0])
     let bd = ""
     let cb = number.indexOf(keyObject[0])
+
     for (let i = 0;i < number.length;i++){
         if (i > cb + keyObject[0] - 2){
             bd += number[i]
         }
     }
-    console.log(keyObject[0] + bd)
+    console.log("hellooooooooooo", keyObject[0] + bd)
     return number.replace(kc,"")
 }
