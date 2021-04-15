@@ -83,7 +83,7 @@ function lowCarbs(obj){
         }
     })
     obj1 = Object.fromEntries(array)
-    return result
+    return obj1
 }
 
 function cartTotal(obj, funct){
