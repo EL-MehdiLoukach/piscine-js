@@ -43,6 +43,6 @@ function reduceKeys(obj,funct,kc){
             bd += number[i]
         }
     }
-    console.log("hellooooooooooo", keyObject[0] + bd)
-    return number.replace(kc,"")
+    
+    return keyObject[0] + bd
 }
