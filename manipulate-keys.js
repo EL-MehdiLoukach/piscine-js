@@ -31,7 +31,7 @@ function reduceKeys(obj,funct, kc = ""){
     
     let keyObject = Object.keys(obj)
     let number
-
+    console.log(kc)
     if (typeof kc == "string"){
         number = keyObject.reduce(funct,kc)
         let bd  = ""
