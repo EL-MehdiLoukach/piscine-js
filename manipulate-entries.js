@@ -23,7 +23,7 @@ function mapEntries(obj,funct){
     let keyObject = Object.keys(obj)
 
     keyObject.forEach((key,index)=>{
-        entries.push([funct([key, obj[key]],index)])
+        entries.push([funct([key, obj[key]],index),obj[key]])
     })
     obj1 = Object.fromEntries(entries)
     return obj1
