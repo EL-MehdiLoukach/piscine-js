@@ -8,7 +8,7 @@ function filterEntries(obj,funct){
         let bool = funct(obj[element],index)
         let boole = funct(element,index)
 
-        if(bool && boole){
+        if(bool || boole){
             entries.push([element,obj[element]])         
         }
     })
