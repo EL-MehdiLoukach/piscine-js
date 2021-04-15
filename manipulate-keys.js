@@ -32,7 +32,7 @@ function reduceKeys(obj,funct, kc = ""){
     let keyObject = Object.keys(obj)
     let number
     console.log(kc)
-    if (typeof kc == "string"){
+    if (typeof kc == "string" || kc == null){
         number = keyObject.reduce(funct,kc)
         let bd  = ""
         for (let i = 0;i < number.length;i++){
@@ -40,6 +40,11 @@ function reduceKeys(obj,funct, kc = ""){
                 bd += number[i]
             }
         }
+
+        if (kc == null){
+            return  keyObject[0] + bd
+        }
+        
         return kc + keyObject[0] + bd
     }   
     
