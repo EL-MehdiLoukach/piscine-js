@@ -69,7 +69,7 @@ function totalCalories(obj){
         result += obj[element] * nutritionDB[element].calories/100
     })
 
-    return result
+    return Math.round(result)
 }
 
 function lowCarbs(obj){
@@ -83,7 +83,6 @@ function lowCarbs(obj){
             array.push([element,obj[element]])
         }
     })
-    console.log(array)
     obj1 = Object.fromEntries(array)
 
     return obj1
