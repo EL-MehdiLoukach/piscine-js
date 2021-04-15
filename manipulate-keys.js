@@ -35,7 +35,7 @@ function reduceKeys(obj,funct,kc){
     keyObject.forEach((element,index)=>{
         if (index == 0){
             console.log("wesh")
-            fd = funct(number, element,index,keyObject)
+            fd = funct(fd, element,index,keyObject)
             console.log(`abcd${fd}`)
         }else{
             number = funct(number, element,index,keyObject,kc)
