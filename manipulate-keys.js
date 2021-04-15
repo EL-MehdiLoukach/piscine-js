@@ -30,7 +30,18 @@ function mapKeys(obj,funct){
 function reduceKeys(obj,funct, kc = ""){
     
     let keyObject = Object.keys(obj)
-    let number = keyObject.reduce(funct,kc)
+    let number
+
+    if (typeof kc == "string"){
+        number = keyObject.reduce(funct,kc)
+        let bd  = ""
+        for (let i = 0;i < number.length;i++){
+            if (i > number.indexOf(keyObject[0]) + keyObject[0].length - 1 ){
+                bd += number[i]
+            }
+        }
+        return keyObject[0] + bd
+    }   
     
     return number
 }
