@@ -32,8 +32,8 @@ function reduceKeys(obj,funct,kc){
     let keyObject = Object.keys(obj)
     let number = kc
     keyObject.forEach((element,index)=>{
-        number = funct(number, element,index,keyObject)
+        number = funct(number, element,index,keyObject,kc)
     })
-    console.log(number)
+    console.log(`abcd${number}dqsdqsdqs${kc}`)
     return number
 }
