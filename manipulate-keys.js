@@ -27,12 +27,17 @@ function mapKeys(obj,funct){
     return obj1
 }
 
-function reduceKeys(obj,funct, kc = ""){
+function reduceKeys(obj,funct, kc){
+
+    if (kc == undefined){
+        kc = null
+    }
     
     let keyObject = Object.keys(obj)
     let number
-    console.log(kc)
+
     if (typeof kc == "string" || kc == null){
+
         number = keyObject.reduce(funct,kc)
         let bd  = ""
         for (let i = 0;i < number.length;i++){
@@ -44,9 +49,11 @@ function reduceKeys(obj,funct, kc = ""){
         if (kc == null){
             return  keyObject[0] + bd
         }
-        
+
         return kc + keyObject[0] + bd
-    }   
+    }else{
+        number = keyObject.reduce(funct,kc)
+    }
     
     return number
 }
