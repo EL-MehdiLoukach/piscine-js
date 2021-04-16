@@ -23,18 +23,8 @@ function fusion(obj1,obj2){
 
             return resultArray
         }else{
-            let arrayKey1 = Object.keys(obj1)
-            let arrayKey2 = Object.keys(obj2)
-            let objectResult = {}
-            arrayKey1.forEach((key1)=>{
-                objectResult[key1] = obj1[key1]
-            })
 
-            arrayKey2.forEach((key2)=>{
-                if (objectResult[key2] != undefined){
-                    objectResult[key2] += obj2[key2]
-                }
-            })
+            return result
         }
     }
 
