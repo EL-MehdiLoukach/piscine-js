@@ -28,7 +28,7 @@ function getJSON(path,params){
 
                 }else if (key ==  "error"){
                     console.log(obj.error)
-                    reject(obj[key])
+                    reject(obj.error)
                 }
             }
         })
