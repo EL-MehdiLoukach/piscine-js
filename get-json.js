@@ -4,8 +4,6 @@ function getJSON(path,params){
     let Path = path
     let Params = params
     
-
-
     return new Promise(function(resolve,reject){
         let parameters = "?"
         let url = Path
@@ -20,17 +18,17 @@ function getJSON(path,params){
         }
 
         fetch(url)
-        .then((response) =>response.json())
+        .then(response =>response.json())
         .then((obj) => {
-
-            for (const key of Object.keys(obj)){
+            console.log(obj)
+            /*for (const key of Object.keys(obj)){
                 if (key == "data"){
                     resolve(key)
 
                 }else if (key ==  "error"){
                     reject(key,obj[key])
                 }
-            }
+            }*/
             return url
         })
         .catch(err => console.log(err))
