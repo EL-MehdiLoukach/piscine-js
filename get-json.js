@@ -35,7 +35,7 @@ function getJSON(path,params){
     })
 }
 
-function checkSpace(nam){
+function checkSpace(name){
     let newName = ""
 
     if (name.includes(" ")){
