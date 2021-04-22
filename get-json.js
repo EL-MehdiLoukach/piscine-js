@@ -28,7 +28,7 @@ console.log(url)
                     resolve(obj.data)
 
                 }else if (key ==  "error"){
-                    reject(obj.error)
+                    reject(obj[key])
                 }
             }
         })
