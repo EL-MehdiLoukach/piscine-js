@@ -22,12 +22,13 @@ console.log(url)
         fetch(url)
         .then(response => response.json())
         .then((obj) => {
-            console.log(obj)
+            
             for (const key of Object.keys(obj)){
                 if (key == "data"){
                     resolve(obj.data)
 
                 }else if (key ==  "error"){
+                    console.log(obj[key])
                     reject(obj[key])
                 }
             }
