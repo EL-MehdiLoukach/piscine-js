@@ -31,7 +31,8 @@ function getJSON(path,params){
                     reject(key,obj[key])
                 }
             }
-        })
+            return url
+        }).catch(err => console.log(err))
     })
 }
 
