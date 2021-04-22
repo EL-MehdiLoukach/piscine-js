@@ -16,22 +16,21 @@ function getJSON(path,params){
         url += parameters.slice(0,parameters.length - 1)
     }
 
-    
+console.log(url)
     return new Promise(function(resolve,reject){
 
         fetch(url)
         .then(response => response.json())
         .then((obj) => {
             console.log(obj)
-            /*for (const key of Object.keys(obj)){
+            for (const key of Object.keys(obj)){
                 if (key == "data"){
-                    resolve(key)
+                    resolve(obj.data)
 
                 }else if (key ==  "error"){
-                    reject(key,obj[key])
+                    reject(obj.error)
                 }
-            }*/
-            resolve(obj.data)
+            }
         })
     })
 }
