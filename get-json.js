@@ -7,7 +7,7 @@ function getJSON(path,params){
     let parameters = "?"
     let url = Path
 
-    if (Params  != undefined){
+    if (Params !== undefined){
         for (let [key,value] of Object.entries(params)){
 
             parameters += `${checkSpace(key)}=${checkSpace(value.toString() )}&`
@@ -21,7 +21,7 @@ function getJSON(path,params){
         fetch(url)
         .then(response => response.json())
         .then((obj) => {
-            console;log(obj)
+            console.log(obj)
             for (const key of Object.keys(obj)){
                 if (key == "data"){
                     resolve(obj.data)
@@ -35,7 +35,7 @@ function getJSON(path,params){
     })
 }
 
-function checkSpace(name){
+function checkSpace(nam){
     let newName = ""
 
     if (name.includes(" ")){
@@ -46,6 +46,6 @@ function checkSpace(name){
     return name
 }
 
-//getJSON("/test",{ query: 'hello world', b: 5 })
+getJSON("/test",{ query: 'hello world', b: 5 })
 
  
