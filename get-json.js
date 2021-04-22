@@ -20,12 +20,9 @@ function getJSON(path,params){
         }
 
         fetch(url)
-        .then((response) => {
-            console.log("hello")
-            response.json()
+        .then((response) =>response.json())
+        .then((obj) => {
 
-        }).then((obj) => {
-            
             for (const key of Object.keys(obj)){
                 if (key == "data"){
                     resolve(key)
