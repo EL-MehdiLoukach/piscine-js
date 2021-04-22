@@ -10,12 +10,13 @@ function getJSON(path,params){
     if (Params  != undefined){
         for (let [key,value] of Object.entries(params)){
 
-            parameters += `${checkSpace(key.toString() )}=${checkSpace(value.toString() )}&`
+            parameters += `${checkSpace(key)}=${checkSpace(value.toString() )}&`
 
         }
         url += parameters.slice(0,parameters.length - 1)
     }
 
+    
     return new Promise(function(resolve,reject){
 
         fetch(url)
@@ -39,7 +40,7 @@ function checkSpace(name){
     let newName = ""
 
     if (name.includes(" ")){
-        newName = name.replaceAll(" ","+")
+        newName = name.split(" ").join("+")
         return newName
     }
 
