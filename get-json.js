@@ -16,7 +16,6 @@ function getJSON(path,params){
         url += parameters.slice(0,parameters.length - 1)
     }
 
-console.log(url)
     return new Promise(function(resolve,reject){
 
         fetch(url)
@@ -28,7 +27,7 @@ console.log(url)
                     resolve(obj.data)
 
                 }else if (key ==  "error"){
-                    console.log(obj[key])
+                    console.log(obj.error)
                     reject(obj[key])
                 }
             }
@@ -47,6 +46,6 @@ function checkSpace(name){
     return name
 }
 
-getJSON("/test",{ query: 'hello world', b: 5 })
+//getJSON("/test",{ query: 'hello world', b: 5 })
 
  
