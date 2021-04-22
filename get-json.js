@@ -15,7 +15,7 @@ function getJSON(path,params){
         }
         url += parameters.slice(0,parameters.length - 1)
     }
-    
+
     return new Promise(function(resolve,reject){
 
         fetch(url)
@@ -30,7 +30,7 @@ function getJSON(path,params){
                     reject(key,obj[key])
                 }
             }*/
-            return url
+            resolve(obj.data)
         })
     })
 }
@@ -46,6 +46,6 @@ function checkSpace(name){
     return name
 }
 
-//getJSON("/test",{ query: 'hello world', b: 5 })
+getJSON("/test",{ query: 'hello world', b: 5 })
 
  
