@@ -21,6 +21,7 @@ function getJSON(path,params){
 
         fetch(url)
         .then((response) => {
+            console.log("hello")
             let obj = response.json()
 
             for (const key of Object.keys(obj)){
