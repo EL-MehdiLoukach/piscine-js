@@ -27,8 +27,8 @@ function getJSON(path,params){
                     resolve(obj.data)
 
                 }else if (key ==  "error"){
-                    console.log(obj.error)
-                    reject(obj.error)
+                    console.log(ParseInt(obj.error))
+                    reject(parseInt(obj.error))
                 }
             }
         })
