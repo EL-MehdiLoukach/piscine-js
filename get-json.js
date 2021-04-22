@@ -21,14 +21,14 @@ function getJSON(path,params){
         fetch(url)
         .then(response => response.json())
         .then((obj) => {
-            
+            console;log(obj)
             for (const key of Object.keys(obj)){
                 if (key == "data"){
                     resolve(obj.data)
 
                 }else if (key ==  "error"){
-                    console.log(ParseInt(obj.error))
-                    reject(parseInt(obj.error))
+                    console.log(obj.error)
+                    reject(obj.error)
                 }
             }
         })
