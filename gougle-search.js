@@ -19,3 +19,7 @@ function queryServers(serverName,q){
     }
     return Promise.race([url1(),url2()])
 }
+
+function gougleSearch(query){
+    console.log("hello")
+}
