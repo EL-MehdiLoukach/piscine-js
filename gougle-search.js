@@ -37,7 +37,7 @@ function gougleSearch(query){
         .then( array => {
 
             if (array ==="timeout"){
-                return "timeout"
+                return array
             }
             let obj = {
                 "web": array[ 0 ],
