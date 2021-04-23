@@ -17,7 +17,6 @@ function queryServers(serverName,q){
             resolve(getJSON(url))
         })
     }
-    console.log(getJSON())
     return Promise.race([url1(),url2()])
 }
 
