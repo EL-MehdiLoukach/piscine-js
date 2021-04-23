@@ -25,7 +25,7 @@ function gougleSearch(query){
     const interval = () => {
         return new Promise((resolve, reject )=>{
             setTimeout(() => {
-                resolve("timeout")
+                reject("timeout")
             },80)
         })
     }
@@ -36,9 +36,6 @@ function gougleSearch(query){
     return Promise.race([promiseServer(),interval()])
         .then( array => {
 
-            if (array ==="timeout"){
-                return array
-            }
             let obj = {
                 "web": array[ 0 ],
                 "image": array[ 1 ],
