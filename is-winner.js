@@ -23,7 +23,7 @@ function isWinner(country){
                                 arrayYears.push(obj.year)
                                 arrayScores.push(obj.score)
                             })
-                            resolve(countryObject.name + ' won the FIFA World Cup in ' + arrayYears.toString().split(",").join(", ") + ' winning by ' + arrayScores.toString())
+                            resolve(countryObject.name + ' won the FIFA World Cup in ' + arrayYears.toString().split(",").join(", ") + ' winning by ' + arrayScores.toString().split(",").join(", "))
                         }
 
                     })
