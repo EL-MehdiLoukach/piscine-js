@@ -23,7 +23,11 @@ function queryServers(serverName,q){
 function gougleSearch(query){
 
     const interval = () => {
-        setTimeout(()=>{},80000)
+        return new Promise((resolve, reject )=>{
+            setTimeout(()=>{
+                resolve("TimeOut")
+            },80)
+        })
     }
 
     const promiseServer = () => {
@@ -38,5 +42,5 @@ function gougleSearch(query){
             })
         return promise
     }
-    return Promise.race([promiseServer()])
+    return Promise.race([promiseServer(),interval()])
 }
