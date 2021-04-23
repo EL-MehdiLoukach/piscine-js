@@ -22,7 +22,7 @@ function queryServers(serverName,q){
 
 function gougleSearch(query){
 
-    const a = ()=>{
+    const a = (query=>{
         let b = {}
         Promise.all([queryServers("web",query),queryServers("image",query),queryServers("video",query)])
             .then(array =>{
@@ -38,7 +38,7 @@ function gougleSearch(query){
             })
             .catch((element) => element)
         return b
-    }
-    let b = a()
-    return b
+    })
+    let c = a()
+    return c
 }
