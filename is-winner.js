@@ -1,8 +1,8 @@
 function isWinner(country){
 
     return new Promise(function (resolve, reject){
-        console.log(typeof db)
-        console.log(db)
+
+        console.log(db.getWinner(country))
     })
 
 }
