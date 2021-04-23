@@ -26,6 +26,7 @@ function gougleSearch(query){
             let b = {}
             array.forEach((element,index)=>{
                 let k = setInterval((element,index)=>{
+                    console.log(element)
                     if (index == 0){
                         b["web"] = element
                     }else if (index == 1){
