@@ -21,9 +21,9 @@ function queryServers(serverName,q){
 }
 
 function gougleSearch(query){
-    console.log(query)
+
     Promise.all([queryServers("web",query),queryServers("image",query),queryServers("video",query)])
-        .then((array) => {
-            console.log(array)
+        .then(co => {
+            console.log(co)
         })
 }
