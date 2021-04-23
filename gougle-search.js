@@ -38,5 +38,5 @@ function gougleSearch(query){
             })
         return promise
     }
-    return Promise.race([promiseServer(),interval()])
+    return Promise.race([promiseServer()])
 }
