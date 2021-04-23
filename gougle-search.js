@@ -25,7 +25,7 @@ function gougleSearch(query){
     const interval = () => {
         setTimeout(()=>{
             return "hello"
-        },80)
+        },8000)
     }
 
     const promiseServer = () => {
