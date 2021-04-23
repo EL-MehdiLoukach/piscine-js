@@ -33,14 +33,23 @@ function gougleSearch(query){
     const promiseServer = () => {
         return Promise.all( [ queryServers( "web", query ), queryServers( "image", query ), queryServers( "video", query ) ] )
     }
-    return Promise.race([promiseServer(),interval()])
-        .then( array => {
-            let obj = {
+
+    let bigobj
+
+    const michel =  Promise.race([promiseServer(),interval()])
+        michel.then( array => {
+            bigobj = {
                 "web": array[ 0 ],
                 "image": array[ 1 ],
                 "video": array[ 2 ],
             }
-            return obj
         })
-        .catch((err) => err)
+
+    return new Promise((resolve, reject) => {
+        if (typeof michel == "string"){
+            reject("timeout")
+        }else{
+            return bigobj
+        }
+    })
 }
