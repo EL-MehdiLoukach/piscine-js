@@ -36,6 +36,7 @@ function gougleSearch(query){
                 })
                 return b
             },800)
+            console.log(c)
             return c
         })
     return a
