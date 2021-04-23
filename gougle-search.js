@@ -33,6 +33,7 @@ function gougleSearch(query){
                     }else if (index === 2){
                         b["video"] = element
                     }
+                    return b
                 })
             })
             .catch((element) => element)
