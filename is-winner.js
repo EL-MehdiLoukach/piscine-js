@@ -2,9 +2,14 @@ function isWinner(country){
 
     return new Promise(function (resolve, reject){
 
-        let isWinner = db.getWinner(country)
+        let countryInWC = db.getWinner(country)
 
-        console.log(isWinner)
+        if (typeof countryInWC == "object" ){
+            console.log(db.getWinner(countryInWC.id))
+        }
     })
 
 }
+
+
+//Promise { { id: 7, name: 'England', continent: 'Europe' } }
