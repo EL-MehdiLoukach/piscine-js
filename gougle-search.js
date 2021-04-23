@@ -20,5 +20,5 @@ function queryServers(serverName,q){
         })
     }
 
-    return Promise.race([url1,url2])
+    return Promise.race([url1(),url2()])
 }
