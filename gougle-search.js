@@ -41,8 +41,6 @@ function gougleSearch(query){
                 "video": array[ 2 ],
             }
             return obj
-        })
-        .catch((err) => {
-            return err
-        })
+        } )
+        .catch((err) => err)
 }
