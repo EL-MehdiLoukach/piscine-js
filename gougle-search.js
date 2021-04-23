@@ -23,7 +23,6 @@ function queryServers(serverName,q){
 function gougleSearch(query){
     let a = Promise.all([queryServers("web",query),queryServers("image",query),queryServers("video",query)])
     let b ={}
-    a.forEach((element)=>{
-        b += getJSON(element)
-    })
+    console.log(a)
+    console.log(typeof a)
 }
