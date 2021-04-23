@@ -34,6 +34,6 @@ function gougleSearch(query){
         return promise
     }
 
-    Promise.race([promiseServer()])
-        .then(element=> console.log(element))
+    return Promise.race([promiseServer()])
+
 }
