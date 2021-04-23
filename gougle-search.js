@@ -23,7 +23,7 @@ function queryServers(serverName,q){
 function gougleSearch(query){
 
     const interval = () => {
-        setInterval(()=>{},80)
+        setInterval(()=>{},8000)
     }
 
     const promiseServer = () => {
