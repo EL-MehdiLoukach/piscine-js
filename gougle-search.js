@@ -17,10 +17,13 @@ function queryServers(serverName,q){
             resolve(getJSON(url))
         })
     }
+    console.log(getJSON())
     return Promise.race([url1(),url2()])
 }
 
 function gougleSearch(query){
-    Promise.all([queryServers("web",query).then(el => console.log(el)),queryServers("image",query),queryServers("video",query)])
+    Promise.all([queryServers("web",query),queryServers("image",query),queryServers("video",query)])
         .then(el => console.log(el))
 }
+
+gougleSearch("hne9n4a9hq6")
