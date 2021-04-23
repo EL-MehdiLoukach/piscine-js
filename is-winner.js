@@ -1,4 +1,4 @@
 function isWinner(country){
-    console.log(country)
+    console.log(typeof country)
 
 }
