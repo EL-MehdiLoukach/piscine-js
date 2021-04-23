@@ -25,14 +25,12 @@ function isWinner(country){
                             })
                             resolve(countryObject.name + ' won the FIFA World Cup in ' + arrayYears.toString().split(",").join(", ") + ' winning by ' + arrayScores.toString().split(",").join(", "))
                         }
-
                     })
                     .catch((noWinWC) => {reject(`${noWinWC} never was a winner`)})
             })
             .catch(() => {
                 resolve(`${country} never was a winner`)
             })
-
     })
 }
 
