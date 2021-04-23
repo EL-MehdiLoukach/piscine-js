@@ -18,7 +18,7 @@ function isWinner(country){
                             resolve(`${countryObject.name} is not what we are looking for because of the number of times it was champion`)
                         }else{
                             countryResult.forEach((obj) => {
-                                console.log(typeof obj)
+                                console.log(obj)
                             })
                         }
 
