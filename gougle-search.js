@@ -35,6 +35,6 @@ function gougleSearch(query){
             })
             return b
         })
-        .catch((element) => console.log(element))
+        .catch((element) => element)
     return a
 }
