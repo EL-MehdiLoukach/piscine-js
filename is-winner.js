@@ -4,7 +4,7 @@ function isWinner(country){
 
         let countryInWC = db.getWinner(country)
 
-        console.log(countryInWC.id)
+        console.log(typeof countryInWC)
 
     })
 
