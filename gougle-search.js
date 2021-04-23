@@ -34,5 +34,6 @@ function gougleSearch(query){
         return promise
     }
 
-    console.log(Promise.race([promiseServer(),interval()]))
+    Promise.race([promiseServer(),interval()])
+        .then(element=> console.log(element))
 }
