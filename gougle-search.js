@@ -25,7 +25,7 @@ function gougleSearch(query){
         .then(array =>{
             let b = {}
 
-            setInterval((array)=>{
+            setInterval((array,b)=>{
                 array.forEach((element,index)=>{
                     if (index == 0){
                         b["web"] = element
@@ -35,8 +35,9 @@ function gougleSearch(query){
                         b["video"] = element
                     }
                 })
+                return b
             },800)
-            return b
+
         })
     return a
 }
