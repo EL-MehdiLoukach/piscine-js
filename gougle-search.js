@@ -26,7 +26,7 @@ function gougleSearch(query){
             .then(array =>{
                 let b = {}
                 array.forEach((element,index)=>{
-                    setTimeout()
+
                     if (index === 0){
                         b["web"] = element
                     }else if (index === 1){
