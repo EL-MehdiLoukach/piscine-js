@@ -34,6 +34,7 @@ function gougleSearch(query){
                     "image": array[1],
                     "video": array[2],
                 }
+                console.log(obj)
                 return obj
             })
         return promise
