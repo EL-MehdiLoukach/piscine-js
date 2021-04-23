@@ -13,9 +13,9 @@ function isWinner(country){
                     .then((countryResult) => {
 
                         if(countryResult.length === 0){
-                            resolve(countryObject.name + ' never was a winner')
+                            resolve(`${countryObject.name} never was a winner`)
                         }else if(countryResult.length < 3){
-                            resolve(countryObject.name + ' is not what we are looking for because of the number of times it was champion')
+                            resolve(`${countryObject.name} is not what we are looking for because of the number of times it was champion`)
                         }else{
                             countryResult.forEach((obj) => {
                                 console.log(typeof obj)
@@ -23,11 +23,10 @@ function isWinner(country){
                         }
 
                     })
-                    .catch((noWinWC) => {reject(noWinWC + ' never was a winner')})
+                    .catch((noWinWC) => {reject(`${noWinWC} never was a winner`)})
             })
-            .catch((err) => {
-                console.log(err)
-                resolve(err + ' never was a winner')
+            .catch(() => {
+                resolve(`${country} never was a winner`)
             })
 
     })
