@@ -42,5 +42,5 @@ function gougleSearch(query){
             }
             return obj
         })
-        .catch((err) => console.log(err))
+        .catch((err) => err)
 }
