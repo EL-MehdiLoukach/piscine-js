@@ -4,7 +4,6 @@ function queryServers(serverName,q){
         return new Promise((resolve) => {
             serverName = serverName.split(" ").join("+")
             q = q.split(" ").join("+")
-
             let url = `/${serverName}?q=${q}`
             resolve(getJSON(url))
         })
@@ -14,11 +13,13 @@ function queryServers(serverName,q){
         return new Promise((resolve) => {
             serverName = serverName.split(" ").join("+")
             q = q.split(" ").join("+")
-
             let url = `/${serverName}_backup?q=${q}`
             resolve(getJSON(url))
         })
     }
-
     return Promise.race([url1(),url2()])
+}
+
+function gougleSearch(query){
+
 }
