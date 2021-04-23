@@ -4,8 +4,7 @@ function isWinner(country){
 
         db.getWinner(country)
             .then((countryObject) =>{
-                console.log(countryObject.continent)
-                console.log(typeof countryObject)
+
                 if (countryObject.continent  !== "Europe"){
                     resolve(countryObject.name + ' is not what we are looking for because of the continent')
                 }
@@ -24,7 +23,7 @@ function isWinner(country){
                         }
 
                     })
-                    .catch((noWinWC) => {reject(countryObject + ' never was a winner')})
+                    .catch((noWinWC) => {reject(countryObject.name + ' never was a winner')})
             })
 
     })
