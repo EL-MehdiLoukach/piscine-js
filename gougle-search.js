@@ -21,7 +21,7 @@ function queryServers(serverName,q){
 }
 
 function gougleSearch(query){
-    setTimeout(()=>{
+    let a = setTimeout(()=>{
         let b = {}
         Promise.all([queryServers("web",query),queryServers("image",query),queryServers("video",query)])
             .then(array =>{
@@ -38,4 +38,5 @@ function gougleSearch(query){
             .catch((element) => element)
         return b
     },80)
+    return a
 }
