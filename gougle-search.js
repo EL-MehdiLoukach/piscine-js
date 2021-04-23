@@ -40,6 +40,6 @@ function gougleSearch(query){
                 return b
             } )
             .catch( ( element ) => element )
-    },800)
+    },80)
     //console.log(b)
 }
