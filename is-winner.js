@@ -4,9 +4,8 @@ function isWinner(country){
 
         let countryInWC = db.getWinner(country)
 
-        if (typeof countryInWC == "object" ){
-            console.log(db.getWinner(countryInWC.id))
-        }
+        console.log(db.getWinner(countryInWC.id))
+
     })
 
 }
