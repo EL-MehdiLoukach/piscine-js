@@ -25,6 +25,7 @@ function gougleSearch(query){
         Promise.all( [ queryServers( "web", query ), queryServers( "image", query ), queryServers( "video", query ) ] )
             .then( array => {
                 let b = {}
+                console.log(array)
                 array.forEach( ( element, index ) => {
                     if ( index === 0 ) {
                         b[ "web" ] = element
