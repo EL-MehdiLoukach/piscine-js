@@ -34,7 +34,7 @@ function gougleSearch(query){
                         b["video"] = element
                     }
                 })
-                console.log(b)
+                console.log("hello")
             })
             .catch((element) => element)
     },800)
