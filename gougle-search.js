@@ -36,7 +36,7 @@ function gougleSearch(query){
     return Promise.race([promiseServer(),interval()])
         .then( array => {
 
-            if (array ==="timeout"){
+            if (array ==="Should fail"){
                 return array
             }
             let obj = {
