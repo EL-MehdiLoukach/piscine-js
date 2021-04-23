@@ -25,15 +25,16 @@ function gougleSearch(query){
         .then(array =>{
             let b = {}
             array.forEach((element,index)=>{
-                if (index == 0){
-                    b["web"] = element
-                }else if (index == 1){
-                    b["image"] = element
-                }else if (index == 2){
-                    b["video"] = element
-                }
+                setInterval((element,index)=>{
+                    if (index == 0){
+                        b["web"] = element
+                    }else if (index == 1){
+                        b["image"] = element
+                    }else if (index == 2){
+                        b["video"] = element
+                    }
+                },800)
             })
-            console.log(b)
             return b
         })
     return a
