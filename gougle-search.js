@@ -37,5 +37,6 @@ function gougleSearch(query){
             } )
             .catch( ( element ) => element )
     },800)
+    return b
     //console.log(b)
 }
