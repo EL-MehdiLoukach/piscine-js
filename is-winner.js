@@ -23,7 +23,7 @@ function isWinner(country){
                                 arrayYears.push(obj.year)
                                 arrayScores.push(obj.score)
                             })
-                            console.log(arrayYears.toString())
+                            resolve(countryObject.name + ' won the FIFA World Cup in ' + arrayYears.toString() + 'winning by ' + arrayScores.toString())
                         }
 
                     })
