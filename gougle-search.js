@@ -24,23 +24,22 @@ function gougleSearch(query){
 
     const interval = () => {
         return new Promise((resolve, reject )=>{
-            setTimeout(()=>{
+            setTimeout(() => {
                 resolve("timeout")
             },80)
         })
     }
 
     const promiseServer = () => {
-        let promise = Promise.all([queryServers("web",query),queryServers("image",query),queryServers("video",query)])
-            .then(array => {
+        return Promise.all( [ queryServers( "web", query ), queryServers( "image", query ), queryServers( "video", query ) ] )
+            .then( array => {
                 let obj = {
-                    "web":array[0],
-                    "image": array[1],
-                    "video": array[2],
+                    "web": array[ 0 ],
+                    "image": array[ 1 ],
+                    "video": array[ 2 ],
                 }
                 return obj
-            })
-        return promise
+            } )
     }
     return Promise.race([promiseServer(),interval()])
 }
