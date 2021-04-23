@@ -24,6 +24,6 @@ function gougleSearch(query){
     let a = Promise.all([queryServers("web",query),queryServers("image",query),queryServers("video",query)])
         .then(el => console.log(el))
     let b ={}
-    console.log(a)
-    console.log(typeof a)
+    //console.log(a)
+    //console.log(typeof a)
 }
