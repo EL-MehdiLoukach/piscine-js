@@ -36,7 +36,7 @@ function gougleSearch(query){
                 })
                 return b
             },800)
-
+            return c
         })
     return a
 }
