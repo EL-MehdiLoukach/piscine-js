@@ -26,11 +26,11 @@ function gougleSearch(query){
             let b = {}
             array.forEach((element,index)=>{
                 if (index == 0){
-                    b["web"] = element
+                    b["web"] = getJSON(element)
                 }else if (index == 1){
-                    b["image"] = element
+                    b["image"] = getJSON(element)
                 }else if (index == 2){
-                    b["video"] = element
+                    b["video"] = getJSON(element)
                 }
             })
             console.log(b)
