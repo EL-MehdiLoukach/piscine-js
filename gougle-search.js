@@ -29,11 +29,16 @@ function gougleSearch(query){
     const promiseServer = () => {
         let promise = Promise.all([queryServers("web",query),queryServers("image",query),queryServers("video",query)])
             .then(array => {
-                return array
+                let obj = {
+                    "web":array[0],
+                    "image": array[1],
+                    "video": array[2],
+                }
+                return obj
             })
         return promise
     }
 
-    return Promise.race([promiseServer()])
+    return Promise.race([promiseServer(),interval()])
 
 }
