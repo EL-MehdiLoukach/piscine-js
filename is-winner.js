@@ -23,8 +23,9 @@ function isWinner(country){
                         }
 
                     })
-                    .catch((noWinWC) => {reject(countryObject.name + ' never was a winner')})
+                    .catch((noWinWC) => {reject(noWinWC + ' never was a winner')})
             })
+            .catch((err) => reject(err))
 
     })
 }
