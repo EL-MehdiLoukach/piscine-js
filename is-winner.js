@@ -4,7 +4,8 @@ function isWinner(country){
 
         db.getWinner(country)
             .then((country) =>{
-                console.log(country.id)
+                db.getResults(country.id)
+                    .then((element) => console.log(element))
             })
 
     })
