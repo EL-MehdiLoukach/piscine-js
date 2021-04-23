@@ -6,7 +6,7 @@ function queryServers(serverName,q){
             q = q.split(" ").join("+")
 
             let url = `/${serverName}?q=${q}`
-            resolve(url)
+            resolve(getJSON(url))
         })
     }
 
@@ -16,9 +16,9 @@ function queryServers(serverName,q){
             q = q.split(" ").join("+")
 
             let url = `/${serverName}_backup?q=${q}`
-            resolve(url)
+            resolve(getJSON(url))
         })
     }
 
-    return Promise.race([getJSON(url1()),getJSON(url2())])
+    return Promise.race([url1(),url2()])
 }
