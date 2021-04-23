@@ -1,4 +1,8 @@
 
 function isValid(date){
-    console.log(date)
+    if (typeof date ==  "string"){
+
+    }
+
+    return false
 }
