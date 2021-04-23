@@ -17,9 +17,13 @@ function isWinner(country){
                         }else if(countryResult.length < 3){
                             resolve(`${countryObject.name} is not what we are looking for because of the number of times it was champion`)
                         }else{
+                            let arrayYears = []
+                            let arrayScores = []
                             countryResult.forEach((obj) => {
-                                console.log(obj)
+                                arrayYears.push(obj.year)
+                                arrayScores.push(obj.score)
                             })
+                            console.log(arrayYears.toString())
                         }
 
                     })
