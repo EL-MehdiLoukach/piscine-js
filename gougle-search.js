@@ -33,9 +33,9 @@ function gougleSearch(query){
                     }else if (index === 2){
                         b["video"] = element
                     }
+                    console.log(b)
                 })
             })
     },800)
-    console.log(b)
     return b
 }
