@@ -3,7 +3,6 @@ function getJSON(path,params){
 
     let Path = path
     let Params = params
-
     let parameters = "?"
     let url = Path
 
@@ -11,7 +10,6 @@ function getJSON(path,params){
         for (let [key,value] of Object.entries(params)){
 
             parameters += `${checkSpace(key)}=${checkSpace(value.toString() )}&`
-
         }
         url += parameters.slice(0,parameters.length - 1)
     }
@@ -42,7 +40,6 @@ function checkSpace(name){
         newName = name.split(" ").join("+")
         return newName
     }
-
     return name
 }
 
