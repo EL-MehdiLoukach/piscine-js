@@ -2,7 +2,9 @@ function isWinner(country){
 
     return new Promise(function (resolve, reject){
 
-        console.log(db.getWinner(country))
+        let isWinner = db.isWinner(country)
+
+        console.log(isWinner)
     })
 
 }
