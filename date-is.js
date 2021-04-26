@@ -8,5 +8,5 @@ function isValid(date){
 }
 
 function isAfter(date1,date2){
-    console.log(date1,date2)
+    console.log(date1 - date2)
 }
