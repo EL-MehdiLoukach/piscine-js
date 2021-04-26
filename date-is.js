@@ -29,6 +29,7 @@ function isFuture(date1){
 }
 
 function isPast(date1){
+    console.log(date1)
     if (!isNaN(date1) || date1.toString() !== ""){
         if (date1 < new Date()){
             return true
