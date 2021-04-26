@@ -10,7 +10,7 @@ function isValid(date){
 function isAfter(date1,date2){
     let objectDate1 = new Date(date1)
     let objectDate2 = new Date(date2)
-    console.log(objectDate1,objectDate2)
+    console.log(date1.length,date2.length)
 
     if (objectDate1.toString() !== "Invalid Date" && objectDate2.toString()!=="Invalid Date"){
         if (objectDate1.getFullYear()>objectDate2.getFullYear()){
