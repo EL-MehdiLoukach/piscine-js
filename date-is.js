@@ -27,3 +27,10 @@ function isFuture(date1){
     }
     return false
 }
+
+function isPast(date1){
+    if (date1 < new Date()){
+        return true
+    }
+    return false
+}
