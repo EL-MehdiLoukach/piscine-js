@@ -13,3 +13,10 @@ function isAfter(date1,date2){
     }
     return false
 }
+
+function isBefore(date1,date2){
+    if(date1 < date2){
+        return true
+    }
+    return false
+}
