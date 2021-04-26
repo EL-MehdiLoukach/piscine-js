@@ -29,7 +29,7 @@ function isFuture(date1){
 }
 
 function isPast(date1){
-    console.log(date1)
+    console.log(typeof date1)
 
     if (date1 < new Date()){
         return true
