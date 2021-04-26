@@ -9,6 +9,9 @@ function isValid(date){
 
 function isAfter(date1,date2){
 
+    console.log(date1.toString().length)
+
+
     if (typeof date1 =="object" && typeof date2 == "object"){
         let objectDate1 = new Date(date1)
         let objectDate2 = new Date(date2)
