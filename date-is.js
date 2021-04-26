@@ -20,6 +20,8 @@ function isAfter(date1,date2){
                 }else {
                     return false
                 }
+            }else{
+                return false
             }
         }
     }
