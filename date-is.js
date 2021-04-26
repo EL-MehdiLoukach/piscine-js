@@ -8,7 +8,7 @@ function isValid(date){
 }
 
 function isAfter(date1,date2){
-
+    console.log(date1,date2)
     if (!isNaN(date1) && !isNaN(date2)){
         let objectDate1 = new Date(date1)
         let objectDate2 = new Date(date2)
