@@ -16,3 +16,10 @@ function isWeekend(date){
     }
     return false
 }
+
+function isLeapYear(date){
+    if (typeof date =="object"){
+        console.log(date.getFullYear() / 100)
+    }
+    return false
+}
