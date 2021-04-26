@@ -29,8 +29,10 @@ function isFuture(date1){
 }
 
 function isPast(date1){
-    if (date1 < new Date()){
-        return true
+    if (!isNaN(date1)){
+        if (date1 < new Date()){
+            return true
+        }
     }
     return false
 }
