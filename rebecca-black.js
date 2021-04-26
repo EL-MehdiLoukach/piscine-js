@@ -19,8 +19,8 @@ function isWeekend(date){
 
 function isLeapYear(date){
     if (typeof date =="object"){
-        if (Number.isInteger(date / 4) && !Number.isInteger(date/100)){
-            if (Number.isInteger(date /400)){
+        if (Number.isInteger(date.getFullYear() / 4) && !Number.isInteger(date.getFullYear()/100)){
+            if (Number.isInteger(date.getFullYear() /400)){
                 return true
             }
         }
