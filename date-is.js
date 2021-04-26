@@ -1,9 +1,8 @@
 
 function isValid(date){
-    console.log(date)
-    if (isNaN(date)){
-        return false
-    }else{
-        return true
+    if (!isNaN(date)){
+        let a =  new Date(date)
+        console.log(a)
     }
+    return false
 }
