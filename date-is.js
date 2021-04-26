@@ -14,7 +14,7 @@ function isAfter(date1,date2){
         let objectDate2 = new Date(date2)
 
         if (objectDate1.toString() !== "Invalid Date" && objectDate2.toString() !== "Invalid Date"){
-                if (date1.length>7 && date2.length> 7){
+                if (objectDate1.toString().length>7 && objectDate2.toString().length> 7){
                     if (objectDate1.getFullYear() > objectDate2.getFullYear()){
 
                         return true
