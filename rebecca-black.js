@@ -27,4 +27,30 @@ function isLeapYear(date){
     }
     return false
 }
-console.log(isLeapYear(new Date('2020-06-05')))
+
+function isLastDayOfMonth(date){
+    if (typeof date =="object"){
+        let yearBissex =  isLeapYear(date)
+
+        if ((date.getMonth()+1)%2 === 1){ //31 jours
+            if (date.getDate() === 31){
+                return true
+            }
+        }else if ((date.getMonth()+1)%2 === 0){ // 30 jours
+            if (date.getMonth === 1 && yearBissex){
+                if (date.getDate() === 29){
+                    return true
+                }
+            }else if(date.getMonth === 1 && !yearBissex){
+                if (date.getDate() === 28){
+                    return true
+                }
+            }
+        }else{
+            if (date.getDate() === 30){
+                return true
+            }
+        }
+    }
+    return false
+}
