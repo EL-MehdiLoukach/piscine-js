@@ -8,9 +8,8 @@ function isValid(date){
 }
 
 function isAfter(date1,date2){
-    console.log(typeof date1,typeof date2)
     if (isNaN(date1) && isNaN(date2)){
-        console.log(date1.getFullYear())
+        return true
     }
     return false
 }
