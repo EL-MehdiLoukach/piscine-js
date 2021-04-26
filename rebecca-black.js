@@ -31,33 +31,37 @@ function isLeapYear(date){
 function isLastDayOfMonth(date){
     if (typeof date =="object"){
         let yearBissex =  isLeapYear(date)
+        let day = date.getDate()
+        let month =  date.getMonth() + 1
 
-        if ((date.getMonth())%2 === 1){ //31 jours
-            if (date.getDate() === 31){
-                return true
-            }
-
-        }else if ((date.getMonth() + 1)%2 === 0 && yearBissex){ // 30 jours
-
-            if (date.getMonth() === 1 && yearBissex){
-                if (date.getDate() === 29){
+        if (yearBissex){
+            if(month % 2 ===0){
+                if(month ===2 && day=== 29){
+                    return true
+                }else if(day === 31 ){
                     return true
                 }
-            }
-
-        }else if ((date.getMonth()+1)%2 === 0 && !yearBissex){
-            if(date.getMonth() === 1 && !yearBissex){
-                if (date.getDate() === 28){
+            }else{
+                if(day ===30){
                     return true
                 }
             }
         }else{
-            if (date.getDate() === 30){
-                return true
+            if(month % 2 ===0){
+                if(month ===2 && day=== 28){
+                    return true
+                }else if(day === 31 ){
+                    return true
+                }
+            }else{
+                if(day ===30){
+                    return true
+                }
             }
         }
     }
     return false
 }
 
-console.log(isLastDayOfMonth(new Date('2020-12-31')))
+console.log(isLastDayOfMonth(new Date('2020-02-29')))
+//console.log(isLastDayOfMonth(new Date('2015-9-30')))
