@@ -19,11 +19,12 @@ function isWeekend(date){
 
 function isLeapYear(date){
     if (typeof date =="object"){
-        if (Number.isInteger(date.getFullYear() / 4) && !Number.isInteger(date.getFullYear()/100)){
-            if (Number.isInteger(date.getFullYear() /400)){
+        if (Number.isInteger(date.getFullYear() / 4) === true && Number.isInteger(date.getFullYear()/100) === false){
+            if (Number.isInteger(date.getFullYear()/400) === false){
                 return true
             }
         }
     }
     return false
 }
+console.log(isLeapYear(new Date('2020-06-05')))
