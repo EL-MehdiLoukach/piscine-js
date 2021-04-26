@@ -22,6 +22,8 @@ function isBefore(date1,date2){
 }
 
 function isFuture(date1){
-    console.log(date1 - new Date())
-
+    if (date1 > new Date()){
+        return true
+    }
+    return false
 }
