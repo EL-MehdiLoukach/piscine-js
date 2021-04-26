@@ -1,8 +1,9 @@
 
 function isValid(date){
     console.log(date)
-    if (typeof date == "string" && date.length >=8){
+    if (isNaN(date)){
         return false
+    }else{
+        return true
     }
-    return false
 }
