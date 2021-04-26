@@ -4,16 +4,18 @@ function bloodySunday(date){
     let result = (date - date001) % 6
     console.log(result, date-date001)
 
-switch ( result ){
-    case 1:
-        return "Monday"
-    case 2:
-        return "Tuesday"
-    case 3:
-        return "Wednesday"
-    case 4:
-        return "Friday"
-    case 3:
-        return "Saturday"
-}
+    switch ( result ){
+        case 0:
+            return "Monday"
+        case 1:
+            return "Tuesday"
+        case 2:
+            return "Wednesday"
+        case 3:
+            return "Thursday"
+        case 4:
+            return "Friday"
+        case 5:
+            return "Saturday"
+    }
 }
