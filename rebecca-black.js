@@ -37,7 +37,7 @@ function isLastDayOfMonth(date){
                 return true
             }
 
-        }else if ((date.getMonth())%2 === 0 && yearBissex){ // 30 jours
+        }else if ((date.getMonth() + 1)%2 === 0 && yearBissex){ // 30 jours
 
             if (date.getMonth() === 1 && yearBissex){
                 if (date.getDate() === 29){
@@ -45,7 +45,7 @@ function isLastDayOfMonth(date){
                 }
             }
 
-        }else if ((date.getMonth())%2 === 0 && !yearBissex){
+        }else if ((date.getMonth()+1)%2 === 0 && !yearBissex){
             if(date.getMonth() === 1 && !yearBissex){
                 if (date.getDate() === 28){
                     return true
