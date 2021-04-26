@@ -8,9 +8,10 @@ function isValid(date){
 }
 
 function isAfter(date1,date2){
-    console.log(isNaN(date1))
+
     if (typeof date1 =="object" && typeof date2 == "object"){
-        console.log("hello")
+        let objectDate1 = new Date(date1)
+        console.log(objectDate1)
     }
     return false
 }
