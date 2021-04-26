@@ -13,7 +13,12 @@ function isAfter(date1,date2){
         let objectDate1 = new Date(date1)
         let objectDate2 = new Date(date2)
         if (objectDate1.toString() !== "Invalid Date" && objectDate2.toString()!=="Invalid Date"){
-            console.log(objectDate1.getMonth(),objectDate2.getMonth())
+            if(objectDate1.getFullYear()<= 2021 && objectDate2.getFullYear()<= 2021){
+                if (objectDate1.getFullYear()> objectDate2.getFullYear()){
+                    return true
+                }
+                return false
+            }
         }
     }
     return false
