@@ -8,6 +8,7 @@ function isValid(date){
 }
 
 function isAfter(date1,date2){
+    console.log(isNaN(date1))
     if (isNaN(date1) && isNaN(date2)){
         return true
     }
