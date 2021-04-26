@@ -12,12 +12,13 @@ function isAfter(date1,date2){
     let objectDate2 = new Date(date2)
     console.log(date1,date2)
 
-    if (objectDate1.toString() !== "Invalid Date" && objectDate2.toString()!=="Invalid Date" && date1.length >= 7 && date2.length >= 7){
-        if (objectDate1.getFullYear() > objectDate2.getFullYear()){
-            return true
-        }else {
-            return false
+    if (!isNaN(date1) && !isNaN(date2)){
+        if (objectDate1.toString() !== "Invalid Date" && objectDate2.toString()!=="Invalid Date" && date1.length >= 7 && date2.length >= 7){
+            if (objectDate1.getFullYear() > objectDate2.getFullYear()){
+                return true
+            }else {
+                return false
+            }
         }
     }
-
 }
