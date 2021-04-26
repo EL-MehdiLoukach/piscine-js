@@ -18,7 +18,7 @@ function bloodySunday(date){
     }
 
     if (date.getDate() === 6 ){
-        return "Satudray"
+        return "Saturday"
     }
 
     return "Monday"
