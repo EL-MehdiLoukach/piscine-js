@@ -37,18 +37,20 @@ function isLastDayOfMonth(date){
                 return true
             }
 
-        }else if ((date.getMonth())%2 === 0){ // 30 jours
+        }else if ((date.getMonth())%2 === 0 && yearBissex){ // 30 jours
 
             if (date.getMonth() === 1 && yearBissex){
                 if (date.getDate() === 29){
                     return true
                 }
-            }else if(date.getMonth() === 1 && !yearBissex){
+            }
+
+        }else if ((date.getMonth())%2 === 0 && !yearBissex){
+            if(date.getMonth() === 1 && !yearBissex){
                 if (date.getDate() === 28){
                     return true
                 }
             }
-
         }else{
             if (date.getDate() === 30){
                 return true
