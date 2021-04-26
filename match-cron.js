@@ -3,7 +3,7 @@ function matchCron(cron,date){
     let minutes = date.getMinutes()
     let hour = date.getHours()
     let day = date.getDate()
-    let month = date.getMonth()
+    let month = date.getMonth() +1
     let dayWeek = date.getDay()
     let arrayCron = cron.split(" ")
     let compteur = 0
@@ -16,28 +16,28 @@ function matchCron(cron,date){
     }
 
     for (let i =0;i<arrayCron.length;i++){
-        if (!arrayCron[i].includes("*")){
-            if (arrayCron[i] === minutes){
+        if (arrayCron[i].includes("*") === false){
+            if (arrayCron[i] == minutes){
                 compt2++
                 continue
             }
 
-            if (arrayCron[i] === hour){
+            if (arrayCron[i] == hour){
                 compt2++
                 continue
             }
 
-            if (arrayCron[i] === day){
+            if (arrayCron[i] == day){
                 compt2++
                 continue
             }
 
-            if (arrayCron[i] === month){
+            if (arrayCron[i] == month){
                 compt2++
                 continue
             }
 
-            if (arrayCron[i] === dayWeek){
+            if (arrayCron[i] == dayWeek){
                 compt2++
                 continue
             }
