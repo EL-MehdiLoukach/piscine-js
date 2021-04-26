@@ -17,27 +17,27 @@ function matchCron(cron,date){
 
     for (let i =0;i<arrayCron.length;i++){
         if (arrayCron[i].includes("*") === false){
-            if (arrayCron[i] == minutes){
+            if (arrayCron[i] == minutes && i ===0){
                 compt2++
                 continue
             }
 
-            if (arrayCron[i] == hour){
+            if (arrayCron[i] == hour && i ===1){
                 compt2++
                 continue
             }
 
-            if (arrayCron[i] == day){
+            if (arrayCron[i] == day && i ===2){
                 compt2++
                 continue
             }
 
-            if (arrayCron[i] == month){
+            if (arrayCron[i] == month && i ===3){
                 compt2++
                 continue
             }
 
-            if (arrayCron[i] == dayWeek){
+            if (arrayCron[i] == dayWeek && i ===4){
                 compt2++
                 continue
             }
@@ -50,4 +50,4 @@ function matchCron(cron,date){
 
     return false
 }
-console.log(matchCron('* * * * 1',new Date('2020-06-01 00:00:00')))
+console.log(matchCron('3 3 * 3 3', new Date('2021-03-02 03:03:00')))
