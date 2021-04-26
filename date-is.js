@@ -8,7 +8,7 @@ function isValid(date){
 }
 
 function isAfter(date1,date2){
-    if (isNaN(date)){
+    if (isNaN(date1) && isNaN(date2)){
         let a =  new Date(date)
         return a.toString() !== "Invalid Date";
     }
