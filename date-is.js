@@ -9,7 +9,7 @@ function isValid(date){
 
 function isAfter(date1,date2){
 
-    console.log(date1.toString().length)
+    console.log(date2.toString().length)
 
 
     if (typeof date1 =="object" && typeof date2 == "object"){
