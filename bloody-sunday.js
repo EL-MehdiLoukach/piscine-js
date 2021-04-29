@@ -5,6 +5,20 @@ function bloodySunday(date){
     let seconde = (result * 0.001)
     let calcul = (seconde * 3600) * 24
 
-    console.log(calcul)
-    return "Monday"
+    switch ( calcul % 6 ){
+        case 0:
+            return "Monday"
+        case 1:
+            return "Tuesday"
+        case 2:
+            return "Wednesday"
+        case 3:
+            return "Thursday"
+        case 4:
+            return "Friday"
+        case 5:
+            return "Saturday"
+        default :
+            return "Error"
+    }
 }
