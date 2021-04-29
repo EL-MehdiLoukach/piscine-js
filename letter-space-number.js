@@ -1,5 +1,6 @@
 
 function letterSpaceNumber(str){
-    console.log(str)
-
+    let array = []
+    let reg = /\w  \d /
+    console.log(str.match(reg))
 }
