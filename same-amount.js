@@ -1,10 +1,9 @@
 
 function sameAmount(str,reg1,reg2){
-    let re1 = new RegExp(reg1.toString() + "g")
-    let arr1 = str.match(re1) ?? []
+    let arr1 = str.match(reg1 + /g/) ?? []
     let arr2 = str.match(reg2) ?? []
 
-    console.log(re1)
+    console.log(reg1)
 
     if (arr1.length === arr2.length){
         return true
