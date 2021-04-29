@@ -1,4 +1,4 @@
 
-let normal = (str)=>{ "hi" => str}
+let normal = ()=>{ "hi"}
 let begin = "^(hi)"
 let end = "(hi)$"
