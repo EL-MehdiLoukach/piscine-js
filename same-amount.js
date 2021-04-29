@@ -1,6 +1,6 @@
 
 function sameAmount(str,reg1,reg2){
-    let re1 = new RegExp(str.toString() + "g")
+    let re1 = new RegExp(reg1.toString() + "g")
     let arr1 = str.match(re1) ?? []
     let arr2 = str.match(reg2) ?? []
 
