@@ -1,18 +1,8 @@
 
 function letterSpaceNumber(str){
-    let array = []
-    let reg = /\w \d /g
-    let a = str.match(reg)
+    let reg = /\w \b\d\b/g
+    return str.match(reg) ?? []
 
-    if (a == null){
-        return []
-    }
-
-    a.forEach((element)=>{
-        array.push(element.slice(0,-1))
-    })
-
-    return array
 }
 
-console.log(letterSpaceNumber("I like 7up."))
+console.log(letterSpaceNumber("It's 20 past 3"))
