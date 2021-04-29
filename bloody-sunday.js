@@ -6,6 +6,6 @@ function bloodySunday(date){
     let seconde = (result * 0.001)
     let calcul = (seconde * 3600) * 24
 
-    console.log(calcul)
+    console.log(calcul%6)
     return "Monday"
 }
