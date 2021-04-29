@@ -1,6 +1,8 @@
 
 function letterSpaceNumber(str){
     let array = []
-    let reg = /[a-zA-Z0-9_]  [0-9] /
+    let reg = /\w \d /g
     console.log(str.match(reg))
 }
+
+letterSpaceNumber("He is 8 or 9 years old, not 10.")
