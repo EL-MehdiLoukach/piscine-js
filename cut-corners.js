@@ -54,7 +54,7 @@ function ceil(number){
     return NaN
 }
 
-function floor(number){
+function floor (number){
 
     let compteur = 0
     let NUMBER = number
